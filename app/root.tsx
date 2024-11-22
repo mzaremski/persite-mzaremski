@@ -7,9 +7,8 @@ import {
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Theme } from "@radix-ui/themes";
-import radixStyles from "@radix-ui/themes/styles.css";
-import styles from "~/main.css";
-import "@fontsource-variable/lexend/wght.css";
+import radixStyles from "@radix-ui/themes/styles.css?url";
+import styles from "~/main.css?url";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
