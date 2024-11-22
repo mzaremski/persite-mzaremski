@@ -2,5 +2,9 @@ body {
   font-weight: 100;
   box-sizing: border-box;
   padding: 3px;
-  background-color: 'red';
+  background-color: red!important;
+}
+
+body h1 {
+  font-family: "Lexend";
 }

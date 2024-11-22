@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Theme } from "@radix-ui/themes";
 import radixStyles from "@radix-ui/themes/styles.css?url";
 import styles from "~/main.css?url";
+import FontStyles from "@fontsource/lexend/index.css?url";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -39,6 +40,7 @@ export default function App() {
 export function links() {
   return [
     { rel: "stylesheet", href: radixStyles },
+    { rel: "stylesheet", href: FontStyles },
     { rel: "stylesheet", href: styles },
   ];
 } 
