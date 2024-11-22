@@ -6,6 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
+import { Theme } from "@radix-ui/themes";
+import radixStyles from "@radix-ui/themes/styles.css";
+import styles from "~/main.css";
+import "@fontsource-variable/lexend/wght.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,10 +21,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-        <Analytics />
+        {/* PERSITE_TODO_CHANGE_ME */}
+        <Theme appearance="dark" accentColor="purple" grayColor="slate" radius="full" scaling="110%">
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          <Analytics />
+        </Theme>
       </body>
     </html>
   );
@@ -29,3 +36,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return <Outlet />;
 }
+
+export function links() {
+  return [
+    { rel: "stylesheet", href: radixStyles },
+    { rel: "stylesheet", href: styles },
+  ];
+} 
