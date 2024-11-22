@@ -5,6 +5,7 @@ body {
   background-color: red!important;
 }
 
-body h1 {
+/* TODO: To fix this */
+body h1, h2, h3, h4, h5, h6, p, span, div {
   font-family: "Lexend";
 }
