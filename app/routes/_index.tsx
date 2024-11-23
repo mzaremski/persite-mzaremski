@@ -2,7 +2,7 @@ import type { MetaFunction } from "@vercel/remix";
 import { TypeAnimation } from "react-type-animation";
 import data from "../../data";
 import { Box, Container, Section, Card, Separator, Spinner, Badge } from "@radix-ui/themes";
-import { Twitter , Linkedin, Instagram, Github, BookOpen, ThumbsUp, CogIcon, Compass, Paintbrush } from "lucide-react";
+import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon, BookmarkIcon, QuoteIcon, Pencil1Icon, AvatarIcon, SewingPinIcon } from "@radix-ui/react-icons";
 export const meta: MetaFunction = () => {
   return [
     { title: data.pageTitle },
@@ -55,33 +55,33 @@ export default function Index() {
             <Section>
               <h2>Projects</h2>
               <ul>
-                <li><BookOpen /> LingoReaders <Badge><Spinner size="1" style={{ display: 'inline-block', }} /></Badge></li>
-                <li><ThumbsUp /> Propsify <Badge><Spinner size="1" style={{ display: 'inline-block', }} /></Badge></li>
-                <li><CogIcon /> Persite <Badge>2024 | Free</Badge></li>
-                <li><Compass /> GpxOverlay <Badge>1k$/m</Badge></li>
-                <li><Paintbrush /> Ikonate <Badge>2018 | Free</Badge></li>  
+                <li><BookmarkIcon /> LingoReaders <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q2 2024</Badge></li>
+                <li><QuoteIcon /> Propsify <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q1 2024</Badge></li>
+                <li><AvatarIcon /> Persite <Badge color="green">2024 | Free</Badge></li>
+                <li><SewingPinIcon /> GpxOverlay <Badge color="green">1k$/m</Badge></li>
+                <li><Pencil1Icon /> Ikonate <Badge color="indigo">2018 | Free</Badge></li>  
               </ul>
             </Section>
 
             <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>
               <Box style={{borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://linkedin.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Linkedin />
+                <a href="https://linkedin.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                  <LinkedInLogoIcon />
                 </a>
               </Box>
               <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://twitter.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Twitter/>
+                <a href="https://twitter.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                  <TwitterLogoIcon />
                 </a>
               </Box>
               <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://instagram.com"style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Instagram />
+                <a href="https://instagram.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                  <InstagramLogoIcon />
                 </a>
               </Box>
               <Box style={{ textAlign: 'center' }}>
-                <a href="https://instagram.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Github />
+                <a href="https://instagram.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                  <GitHubLogoIcon/>
                 </a>
               </Box>
             </Box>
