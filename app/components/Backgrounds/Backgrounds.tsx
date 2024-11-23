@@ -1,15 +1,57 @@
 export const ParallaxyStars = () => {
   return (
-    <>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </>
+    <div id="background-parallaxy-stars">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 } 
 
 export const PerlinNoise = () => {
   return (
-    <div className="el"></div>
+    <div id="background-perlin-noise"></div>
   )
 } 
+
+export const FlyingOrbes = () => {
+  return (
+    <div id="background-flying-orbes">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  )
+} 
+
+export const ShootingStars = () => {
+  return (
+    <div id="background-shooting-stars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  )
+}
