@@ -13,6 +13,9 @@ Twitter: https://twitter.com/marcinzaremski
 
 ## Follow Me
 0. You can look for "PERSITE_TODO_CHANGE_ME" comments in the code.
+   - [ ] Something 1
+   - [ ] Something 2
+   - [ ] Something 3
 1. Install: `pnpm install`
 2. Open `.data.ts` and change the values to your own.
 3. Open https://www.radix-ui.com/themes/playground and find the colors you like. Copy the settings and paste into `app/root.tsx` in `<Theme>` tag.

@@ -1,12 +1,5 @@
-html {
-  box-sizing: border-box;
-}
 body {
-  font-weight: 100;
-  padding: 10px;
-  height: 100vh;
-  box-sizing: border-box;
-  background:black;
+  /* background:black; */
 }
 
 /* TODO: To fix this */

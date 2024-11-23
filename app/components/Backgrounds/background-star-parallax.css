@@ -2,7 +2,7 @@
 /* To css by: https://gist.github.com/MikhaiTran/7aa49ff3a18549587108b571e20c054b */
 
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 @keyframes animStar {

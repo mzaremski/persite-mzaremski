@@ -7,10 +7,13 @@ import {
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Theme } from "@radix-ui/themes";
+import * as Backgrounds from "./components/Backgrounds/Backgrounds";
+// Styles
 import radixStyles from "@radix-ui/themes/styles.css?url";
-import styles from "~/star-parallax.css?url";
-import stylesStarParallax from "~/main.css?url";
 import FontStyles from "@fontsource/lexend/index.css?url";
+import styles from "~/main.css?url";
+import stylesStarParallax from "~/components/Backgrounds/background-star-parallax.css?url";
+import stylesPerlinNoise from "~/components/Backgrounds/background-perlin-noise.css?url";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -31,10 +34,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           scaling="110%"
           style={{ borderRadius: "var(--radius-6)" }}
         >
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
+          {/* PERSITE_TODO_CHANGE_ME */}
+          <Backgrounds.PerlinNoise />
+
           {children}
+
           <ScrollRestoration />
           <Scripts />
           <Analytics />
@@ -52,7 +56,8 @@ export function links() {
   return [
     { rel: "stylesheet", href: radixStyles },
     { rel: "stylesheet", href: FontStyles },
-    { rel: "stylesheet", href: stylesStarParallax },
     { rel: "stylesheet", href: styles },
+    { rel: "stylesheet", href: stylesStarParallax },
+    { rel: "stylesheet", href: stylesPerlinNoise },
   ];
 } 
