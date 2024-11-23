@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           style={{ borderRadius: "var(--radius-6)" }}
         >
           {/* PERSITE_TODO_CHANGE_ME: */}
-          <Backgrounds.ParallaxyStars />
+          <Backgrounds.FlyingOrbes />
 
           {children}
 
