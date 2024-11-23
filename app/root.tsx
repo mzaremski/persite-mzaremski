@@ -15,6 +15,7 @@ import stylesFlyingOrbes from "~/components/Backgrounds/background-flying-orbes.
 import stylesPerlinNoise from "~/components/Backgrounds/background-perlin-noise.css?url";
 import stylesShootingStars from "~/components/Backgrounds/background-shooting-stars.css?url";
 import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-stars.css?url";
+import Footer from "./components/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,13 +34,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           grayColor="slate"
           radius="full"
           scaling="110%"
-          style={{ borderRadius: "var(--radius-6)" }}
         >
           {/* PERSITE_TODO_CHANGE_ME: */}
           <Backgrounds.FlyingOrbes />
 
           {children}
-
+          <Footer/>
           <ScrollRestoration />
           <Scripts />
           <Analytics />
