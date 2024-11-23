@@ -1,8 +1,8 @@
 body {
   font-weight: 100;
   box-sizing: border-box;
-  padding: 3px;
-  background-color: red!important;
+  margin: 10px;
+  background:black;
 }
 
 /* TODO: To fix this */

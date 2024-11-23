@@ -22,7 +22,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {/* PERSITE_TODO_CHANGE_ME */}
-        <Theme appearance="dark" accentColor="purple" grayColor="slate" radius="full" scaling="110%">
+        <Theme
+          appearance="dark"
+          accentColor="indigo"
+          grayColor="slate"
+          radius="full"
+          scaling="110%"
+          style={{ borderRadius: "var(--radius-6)" }}
+        >
           {children}
           <ScrollRestoration />
           <Scripts />
