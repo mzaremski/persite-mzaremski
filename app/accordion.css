@@ -35,11 +35,13 @@
   align-items: center;
   justify-content: space-between;
   border: none;
-  border-radius: var(--radius-3);
+  border-radius: 0;
+  border-bottom: 1px solid var(--gray-a6);
 }
 
 .AccordionTrigger:hover {
-  background-color: var(--gray-a2);
+  border-radius: var(--radius-3);
+  background-color: var(--gray-a4);
 }
 
 .AccordionContent {
