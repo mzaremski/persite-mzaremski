@@ -47,7 +47,7 @@ export default function Index() {
               </Flex>
 
               <p style={{ paddingTop: '1em' }}>
-                A full stack developer since 2018, who was working with small project as well with big fintech startups (ex-Shares). After 9 months travel break, switched into indie hacking and freelancing in 2024.
+                A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.
               </p>
               <p>
                 Startup mentality & happy to help you grow!

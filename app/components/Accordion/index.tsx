@@ -30,6 +30,10 @@ const AccordionContent = React.forwardRef(
   ),
 );
 
+// Refactoring?
+// More man-hours this sprint?
+// To ship side features silently?"
+
 const AccordionDemo = () => (
   <Accordion.Root
     className="AccordionRoot"
@@ -40,9 +44,9 @@ const AccordionDemo = () => (
       <AccordionContent>
         Does your project need:
         <ul>
-          <li>refactoring</li>
-          <li>more man-hours this sprint?</li>
-          <li>ship a side features silently?</li>
+          <li>Refactoring?</li>
+          <li>More man-hours this sprint?</li>
+          <li>To ship side features silently?</li>
         </ul>
 
         In technologies such as:
@@ -55,7 +59,7 @@ const AccordionDemo = () => (
         </ul>
 
         Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br/>
-        Just tell me the name of the project, what kind of work you need, how often. I will answer ASAP.
+        Just tell me the name of the project, the kind of work you need, and how often. I will respond ASAP.
       </AccordionContent>
     </Accordion.Item>
 
@@ -64,9 +68,9 @@ const AccordionDemo = () => (
       <AccordionContent>
         <ul>
           <li>Do you want to validate and build your startup idea?</li>
-          <li>Do you want to build a MVP?</li>
-          <li>Do you need internal system?</li>
-          <li>Do you have any problem I can solve with an any software?</li>
+          <li>Do you want to build an MVP?</li>
+          <li>Do you need an internal system?</li>
+          <li>Do you have any problem I can solve with software?</li>
         </ul>
         Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br />
         Just tell the name of the company/project, briefly describe it, let me know how much time do you think it can take.
@@ -87,7 +91,7 @@ const AccordionDemo = () => (
       <AccordionTrigger>An indie hacker</AccordionTrigger>
       <Accordion.Content className="AccordionContent">
         <div className="AccordionContentText">
-          Do you want to build a product together? I am always open to new ideas. Let's brainstorm, plan and ship it together!
+          Do you want to build a product together? I'm always open to new ideas. Let's brainstorm, plan, and ship it!
           Mail me here: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a>
         </div>
       </Accordion.Content>
