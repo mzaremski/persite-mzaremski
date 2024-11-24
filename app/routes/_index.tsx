@@ -1,9 +1,10 @@
 import type { MetaFunction } from "@vercel/remix";
 import { TypeAnimation } from "react-type-animation";
 import data from "../../persite-data";
-import { Box, Container, Section, Card, Separator, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
+import { Box, Container, Section, Card, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -19,8 +20,9 @@ export default function Index() {
           <Card size="5">
             <Section size="1">
               <Flex gap="4" align="center">
+              {/* PERSITE_TODO_CHANGE_ME: */}
                 <Avatar
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
+                  src="avatar.jpg"
                   fallback="A"
                   size="7"
                 />
@@ -45,7 +47,10 @@ export default function Index() {
               </Flex>
 
               <p style={{ paddingTop: '1em' }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem cumque iusto animi, odio numquam veritatis illo blanditiis tempore ipsam.
+                A full stack developer since 2018, who was working with small project as well with big fintech startups (ex-Shares). After 9 months travel break, switched into indie hacking and freelancing in 2024.
+              </p>
+              <p>
+                Startup mentality & happy to help you grow!
               </p>
             </Section>
 
@@ -58,28 +63,28 @@ export default function Index() {
               <h2>Projects</h2>
               <ul className="project_list">
                 <li className="project_list_item">
-                  <a href="https://mzaremski.com">
+                  <a>
                     <span>LingoReaders</span>
                     <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q2 2024</Badge>
                   </a>
                   </li>
                 <li className="project_list_item">
-                  <a href="https://mzaremski.com">
+                  <a>
                     Propsify <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q1 2024</Badge>
                   </a>
                   </li>
                 <li className="project_list_item">
-                  <a href="https://mzaremski.com">
+                  <Link to="/persite">
                     Persite <Badge color="green">2024 | Free</Badge>
-                  </a>
+                  </Link>
                   </li>
                 <li className="project_list_item">
-                  <a href="https://mzaremski.com">
+                  <a href="https://gpxoverlay.com?utm_source=mzaremski">
                     GpxOverlay <Badge color="green">1k$/m</Badge>
                   </a>
                   </li>
                 <li className="project_list_item">
-                  <a href="https://mzaremski.com">
+                  <a href="https://ikonate.com?utm_source=mzaremski">
                     Ikonate <Badge color="indigo">2018 | Free</Badge>
                   </a>
                 </li>
@@ -89,34 +94,47 @@ export default function Index() {
             {/* // TODO: Change to Flex */}
             <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>
               <Box style={{borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://linkedin.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                <a
+                  href="https://www.linkedin.com/in/marcin-zaremski-8b3b4714b/"
+                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
+                  target="_blank" rel="noreferrer"
+                >
                   <LinkedInLogoIcon />
                 </a>
               </Box>
               <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://twitter.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                <a
+                  href="https://x.com/marcinzaremski"
+                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
+                  target="_blank" rel="noreferrer"
+                >
                   <TwitterLogoIcon />
                 </a>
               </Box>
               <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a href="https://instagram.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                <a
+                  href="https://instagram.com/mrrrcin"
+                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
+                  target="_blank" rel="noreferrer"
+                >
                   <InstagramLogoIcon />
                 </a>
               </Box>
               <Box style={{ textAlign: 'center' }}>
-                <a href="https://instagram.com" style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}>
+                <a
+                  href="https://github.com/mzaremski"
+                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
+                  target="_blank" rel="noreferrer"
+                >
                   <GitHubLogoIcon/>
                 </a>
               </Box>
             </Box>
           </Card>
-
-
       </Container>
     </Box>
   );
 }
-
 
 // <Section>
 //   <h1>Blog</h1>

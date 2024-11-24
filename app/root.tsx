@@ -66,5 +66,7 @@ export function links() {
     { rel: "stylesheet", href: stylesShootingStars },
     { rel: "stylesheet", href: stylesParallaxyStars },
     { rel: "stylesheet", href: stylesAccordion },
+   // TODO: Make the icon dynamic based on a default radix theme
+    { rel: "icon", href: "/icon.png" },
   ];
 } 

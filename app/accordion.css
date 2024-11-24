@@ -50,7 +50,6 @@
 }
 
 .AccordionContent[data-state="open"] {
-  height: 100px;
   transition: linear 0.5s;
   /* animation: slideDown 300ms ease-in; */
 }
