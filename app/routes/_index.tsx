@@ -1,8 +1,10 @@
 import type { MetaFunction } from "@vercel/remix";
 import { TypeAnimation } from "react-type-animation";
-import data from "../../data";
-import { Box, Container, Section, Card, Separator, Spinner, Badge } from "@radix-ui/themes";
-import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon, BookmarkIcon, QuoteIcon, Pencil1Icon, AvatarIcon, SewingPinIcon } from "@radix-ui/react-icons";
+import data from "../../persite-data";
+import { Box, Container, Section, Card, Separator, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
+import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import AccordionDemo from "~/components/Accordion";
+
 export const meta: MetaFunction = () => {
   return [
     { title: data.pageTitle },
@@ -12,12 +14,19 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <Box style={{ background: "var(--gray-a2)", height: "100vh", width: "100vw"}}>
+    <Box style={{ background: "var(--gray-a2)", height: "100vh", width: "100vw", zIndex: 100 }}>
       <Container size="2">
         <Section>
           <Card size="5">
             <Section>
-              <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
+              <Flex gap="2" align="center">
+                <Avatar
+                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
+                  fallback="A"
+                  size="4"
+                />
+                <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
+              </Flex>
               <span style={{ fontSize: '1.5rem' }}>
                 A<TypeAnimation
                   speed={2}
@@ -42,12 +51,7 @@ export default function Index() {
 
             <Section>
               <h2>Work with me as:</h2>
-              <ul>
-                <li>A freelancer</li>
-                <li>A contractor</li>
-                <li>A full time hire</li>
-                <li>An indie hacker</li>
-              </ul>
+              <AccordionDemo/>
             </Section>
 
             <Separator size="4"/>
@@ -55,11 +59,21 @@ export default function Index() {
             <Section>
               <h2>Projects</h2>
               <ul>
-                <li><BookmarkIcon /> LingoReaders <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q2 2024</Badge></li>
-                <li><QuoteIcon /> Propsify <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q1 2024</Badge></li>
-                <li><AvatarIcon /> Persite <Badge color="green">2024 | Free</Badge></li>
-                <li><SewingPinIcon /> GpxOverlay <Badge color="green">1k$/m</Badge></li>
-                <li><Pencil1Icon /> Ikonate <Badge color="indigo">2018 | Free</Badge></li>  
+                <li>
+                  LingoReaders <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q2 2024</Badge>
+                </li>
+                <li>
+                  Propsify <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q1 2024</Badge>
+                </li>
+                <li>
+                  Persite <Badge color="green">2024 | Free</Badge>
+                </li>
+                <li>
+                  GpxOverlay <Badge color="green">1k$/m</Badge>
+                </li>
+                <li>
+                  Ikonate <Badge color="indigo">2018 | Free</Badge>
+                </li>  
               </ul>
             </Section>
 
@@ -88,7 +102,7 @@ export default function Index() {
           </Card>
         </Section>
 
-        <Section>
+        <Section style={{ zIndex: 100 }}>
           <h1>Blog</h1>
           {/* <Card size="1">
             <h2>Lorem ipsum dolor sit.</h2>

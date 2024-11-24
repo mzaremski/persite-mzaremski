@@ -15,6 +15,7 @@ import stylesFlyingOrbes from "~/components/Backgrounds/background-flying-orbes.
 import stylesPerlinNoise from "~/components/Backgrounds/background-perlin-noise.css?url";
 import stylesShootingStars from "~/components/Backgrounds/background-shooting-stars.css?url";
 import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-stars.css?url";
+import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -35,10 +36,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           radius="full"
           scaling="110%"
         >
-          {/* PERSITE_TODO_CHANGE_ME: */}
           <Backgrounds.FlyingOrbes />
-
-          {children}
+          {/* PERSITE_TODO_CHANGE_ME: */}
+          <main>
+            {children}
+          </main>
           <Footer/>
           <ScrollRestoration />
           <Scripts />
@@ -62,5 +64,6 @@ export function links() {
     { rel: "stylesheet", href: stylesFlyingOrbes },
     { rel: "stylesheet", href: stylesShootingStars },
     { rel: "stylesheet", href: stylesParallaxyStars },
+    { rel: "stylesheet", href: stylesAccordion },
   ];
 } 

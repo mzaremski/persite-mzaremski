@@ -1,6 +1,8 @@
 /* By: https: //codepen.io/delroyprithvi/pen/LYyJROR */
 
-#background-shooting-stars {}
+#background-shooting-stars {
+  z-index: -1;
+}
 
 @keyframes animateBg {
   0%,
