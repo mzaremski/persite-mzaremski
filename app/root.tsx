@@ -26,6 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </head>
       <body>
         {/* PERSITE_TODO_CHANGE_ME: */}

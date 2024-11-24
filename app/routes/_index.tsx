@@ -111,20 +111,23 @@ export default function Index() {
             </Box>
           </Card>
 
-        <Section>
-          <h1>Blog</h1>
-          {/* <Card size="1">
-            <h2>Lorem ipsum dolor sit.</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem cumque iusto animi, odio numquam veritatis illo.
-          </Card> */}
 
-          <ul>
-            <li><a href="/blog">Lorem, ipsum dolor.</a></li>
-            <li><a href="/blog">Lorem ipsum dolor sit amet consectetur adipisicing.</a></li>
-            <li><a href="/blog">Lorem ipsum dolor sit amet.</a></li>
-          </ul>
-        </Section>
       </Container>
     </Box>
   );
 }
+
+
+// <Section>
+//   <h1>Blog</h1>
+//   {/* <Card size="1">
+//             <h2>Lorem ipsum dolor sit.</h2>
+//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem cumque iusto animi, odio numquam veritatis illo.
+//           </Card> */}
+
+//   <ul>
+//     <li><a href="/blog">Lorem, ipsum dolor.</a></li>
+//     <li><a href="/blog">Lorem ipsum dolor sit amet consectetur adipisicing.</a></li>
+//     <li><a href="/blog">Lorem ipsum dolor sit amet.</a></li>
+//   </ul>
+// </Section>
