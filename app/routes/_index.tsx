@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Container size="2">
-      <Card size="5">
+      <Card size={{initial: '2', sm:'5'}}>
           <Section size="1">
             <Flex gap="4" align="center">
             {/* PERSITE_TODO_CHANGE_ME: */}
@@ -27,22 +27,22 @@ export default function Index() {
               />
               <div>
                 <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
-                <span style={{ fontSize: '1.5rem'}}>
+                <span style={{ fontSize: '1.5rem' }}>
                   A<TypeAnimation
                     speed={2}
                     repeat={Infinity}
                     sequence={[
                       "\ developer",
                       "n indie hacker",
-                      "\ freelancer",
+                      "\ freelancer ",
                       "n entrepreneur",
-                      "\ photograper (a bit)",
+                      "\ photograper",
                       "\ surfer",
                       "\ cyclist",
                     ]}
                   />
                 </span>
-              </div>
+            </div>
             </Flex>
 
             <p style={{ paddingTop: '1em' }}>
