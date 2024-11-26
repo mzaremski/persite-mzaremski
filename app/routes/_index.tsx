@@ -1,11 +1,11 @@
 import type { MetaFunction } from "@vercel/remix";
-import { TypeAnimation } from "react-type-animation";
 import data from "../../persite-data";
 import { Box, Container, Section, Card, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
 import { Link } from "@remix-run/react";
 import BlogList from "~/components/BlogList";
+import Header from "~/components/Header";
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,33 +20,7 @@ export default function Index() {
       <Container size="2">
         <Card size={{initial: '2', sm:'5'}}>
             <Section size="1">
-              <Flex gap="4" align="center">
-              {/* PERSITE_TODO_CHANGE_ME: */}
-                <Avatar
-                  src="avatar.jpg"
-                  fallback="A"
-                  size="7"
-                />
-                <div>
-                  <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
-                  <span style={{ fontSize: '1.5rem' }}>
-                    A<TypeAnimation
-                      speed={2}
-                      repeat={Infinity}
-                      sequence={[
-                        "\ developer",
-                        "n indie hacker",
-                        "\ freelancer ",
-                        "n entrepreneur",
-                        "\ photograper",
-                        "\ surfer",
-                        "\ cyclist",
-                      ]}
-                    />
-                  </span>
-              </div>
-              </Flex>
-
+              <Header/>
               <p style={{ paddingTop: '1em' }}>
                 A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.
               </p>
