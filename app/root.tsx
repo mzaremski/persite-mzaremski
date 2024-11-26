@@ -18,6 +18,8 @@ import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-
 import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -26,7 +28,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        {process.env.NODE_ENV === 'production' && (
+          <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        )}
       </head>
       <body>
         {/* PERSITE_TODO_CHANGE_ME: */}
