@@ -1,13 +1,28 @@
 
-export const getPosts = () => {
+type Post = {
+  meta: {
+    title: string;
+    description: string;
+  };
+  path: string;
+} 
+
+export const getPosts = (): Post[] => {
   const rawPosts = import.meta.glob(
-    "./routes/blog.*.mdx",
+    "./routes/posts.*.mdx",
     { eager: true }
   );
   
-  const posts = Object.entries(rawPosts).map(([path, data]) => {
-    return data
-  }).map(({ meta }) => meta[0]);  
+  return Object.entries(rawPosts).map(([path, data]) => {
+    const {title, description} = (data as any).meta[0];
+    const postFileName = path.replace("routes/posts.", "").replace(".mdx", "");
 
-  return posts;
+    return {
+      meta: {
+        title,
+        description,
+      },
+      path: `/posts/${postFileName}`,
+    }
+  });
 } 

@@ -5,7 +5,7 @@ import { Box, Container, Section, Card, Spinner, Badge, Avatar, Flex } from "@ra
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
 import { Link } from "@remix-run/react";
-import BlogCarousel from "~/components/BlogCarousel";
+import BlogList from "~/components/BlogList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -133,8 +133,9 @@ export default function Index() {
             </Box>
           </Card>
       </Container>
+
       <Container size="2">
-        <BlogCarousel/>
+        <BlogList/>
       </Container>
     </>
   );
