@@ -43,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         >
           {/* PERSITE_TODO_CHANGE_ME: */}
           <Backgrounds.FlyingOrbes />
-          <main style={{ paddingTop: '5%', paddingBottom: '5%' }}>
+          <main style={{ paddingTop: '5vw', paddingBottom: '5vw' }}>
             {children}
           </main>
           <Footer/>
