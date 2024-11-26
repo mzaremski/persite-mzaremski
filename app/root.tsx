@@ -18,7 +18,7 @@ import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-
 import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,9 +41,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           radius="full"
           scaling="110%"
         >
-          <Backgrounds.FlyingOrbes />
           {/* PERSITE_TODO_CHANGE_ME: */}
-          <main>
+          <Backgrounds.FlyingOrbes />
+          <main style={{ paddingTop: '5%', paddingBottom: '5%' }}>
             {children}
           </main>
           <Footer/>
