@@ -1,11 +1,10 @@
-# My Blog Post
+---
+meta:
+  - title: SECOND post
+    description: this is description, cool
+---
 
-Content goes here...
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-export default function BlogPost() {
-  return (
-    <div>
-      {/* MDX content will automatically be injected here */}
-    </div>
-  );
-}
+# Hello World

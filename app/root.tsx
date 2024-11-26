@@ -18,8 +18,6 @@ import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-
 import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
