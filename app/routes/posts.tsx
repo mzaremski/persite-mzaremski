@@ -1,18 +1,23 @@
-import { Outlet } from "@remix-run/react";
-
-const posts = import.meta.glob("./*.mdx");
+import { Button, Card, Container, Separator } from "@radix-ui/themes";
+import { Link, Outlet } from "@remix-run/react";
+import Header from "~/components/Header";
 
 export default function PostsLayout() {
   return (
-    <div>
-      <div>
-        Witam na moim blogu. Postów tyle
-        <div>
-          Number of posts: {Object.keys(posts).length}
-        </div>
-      </div>
+    <Container size="2">
+      <Card size={{ initial: '2', sm: '5' }}>
+        <Header />
+        <Separator size="4" my="6" />
 
-      <Outlet />
-    </div>
+        <Outlet />
+
+        <Separator size="4" my="6" />
+        <Link to="/#blog-list">
+          <Button size="2" variant="ghost">
+            Back to home
+          </Button>
+        </Link>
+      </Card>
+    </Container>
   );
 }

@@ -6,7 +6,7 @@ export default function Header() {
     <Flex gap="4" align="center">
       {/* PERSITE_TODO_CHANGE_ME: */}
       <Avatar
-        src="avatar.jpg"
+        src="../avatar.jpg"
         fallback="A"
         size="7"
       />
