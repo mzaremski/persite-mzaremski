@@ -22,3 +22,7 @@ Twitter: https://twitter.com/marcinzaremski
 4. Start the development server: `pnpm run dev`
 5. Open __index.tsx__ and change the text to your own.
 6. Deploy to Vercel
+
+## Useful links
+1. Blog was made with [MDX](https://mdxjs.com/) https://remix.run/docs/en/main/guides/vite#add-mdx-plugin
+   1. https://github.com/pcattori/remix-blog-mdx/blob/main/vite.config.ts
