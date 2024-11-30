@@ -117,9 +117,9 @@ export default function Index() {
           </Card>
       </Container>
 
-      <Container size="2">
+      {/* <Container size="2">
         <BlogList/>
-      </Container>
+      </Container> */}
     </>
   );
 }
