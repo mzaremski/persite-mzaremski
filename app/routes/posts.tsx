@@ -14,7 +14,7 @@ export default function PostsLayout() {
         <Separator size="4" my="6" />
         <Link to="/#blog-list">
           <Button size="2" variant="ghost">
-            Back to home
+            Back to posts list
           </Button>
         </Link>
       </Card>
