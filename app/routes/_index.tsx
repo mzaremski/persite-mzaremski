@@ -59,7 +59,7 @@ export default function Index() {
                   </li>
                 <li className="project_list_item">
                   <Link to="/persite">
-                    Persite <Badge color="green">2024 | Free</Badge>
+                    PerSite <Badge color="green">2024 | Free</Badge>
                   </Link>
                   </li>
                 <li className="project_list_item">
