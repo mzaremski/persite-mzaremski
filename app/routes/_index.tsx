@@ -1,17 +1,26 @@
 import type { MetaFunction } from "@vercel/remix";
+import { useLocation , Link } from "@remix-run/react";
 import data from "../../persite-data";
 import { Box, Container, Section, Card, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
-import { Link } from "@remix-run/react";
 import BlogList from "~/components/BlogList";
 import Header from "~/components/Header";
+import { generateMeta } from "~/utils/meta";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: data.pageTitle },
-    { name: data.pageDescription },
-  ];
+  const title = data.pageTitle;
+  const description = data.pageDescription;
+  const origin = typeof window !== 'undefined' ? window.location.origin : '';
+  
+  const ogImageUrl = `${origin}/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+
+  return generateMeta({
+    title,
+    description,
+    image: ogImageUrl,
+    url: origin,
+  });
 };
 
 export default function Index() {

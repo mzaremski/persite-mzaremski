@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Theme } from "@radix-ui/themes";
@@ -19,6 +20,9 @@ import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const origin = typeof window !== 'undefined' ? window.location.origin : '';
+
   return (
     <html lang="en">
       <head>
