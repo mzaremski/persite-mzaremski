@@ -1,7 +1,7 @@
 import { Flex, Avatar } from "@radix-ui/themes";
 import { TypeAnimation } from "react-type-animation"; 
 
-export default function Header() {
+export default function Header({ ogImage }: { ogImage?: boolean }) {
   return (
     <Flex gap="4" align="center">
       {/* PERSITE_TODO_CHANGE_ME: */}
@@ -12,7 +12,13 @@ export default function Header() {
       />
       <div>
         <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
-        <span style={{ fontSize: '1.5rem' }}>
+        {
+          ogImage
+          ? (
+            <h2 style={{ fontSize: '1.5rem', margin: '0' }}>Freelancer & Indie Hacker</h2>
+          )
+          : (
+            <span style={{ fontSize: '1.5rem' }}>
           A<TypeAnimation
             speed={2}
             repeat={Infinity}
@@ -27,6 +33,8 @@ export default function Header() {
             ]}
           />
         </span>
+          )
+        }
       </div>
     </Flex>
   )
