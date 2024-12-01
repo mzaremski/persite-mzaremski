@@ -1,5 +1,33 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { getPosts } from "~/getPosts";
+import * as fs from "fs";
+import * as path from "path";
+
+const getRoutes = () => {
+  const routesDir = path.join(process.cwd(), "app", "routes");
+  const files = fs.readdirSync(routesDir);
+  
+  const routes = files
+    .filter(file => {
+      // Filter out non-route files
+      return file.endsWith('.tsx') && 
+             !file.startsWith('_') && // Layout routes
+             !file.startsWith('[') && // Special routes like sitemap and robots
+             !file.startsWith('api.') && // API routes
+             !file.startsWith('og') && // OG image routes
+             file !== 'posts.tsx'; // Posts layout
+    })
+    .map(file => {
+      const routePath = file.replace('.tsx', '');
+      return {
+        path: routePath === "_index" ? "" : routePath,
+        // Home page gets highest priority
+        priority: routePath === "_index" ? "1.0" : "0.8"
+      };
+    });
+
+  return routes;
+};
 
 export const loader: LoaderFunction = () => {
   const baseUrl = process.env.SITE_URL || "https://mzaremski.com";
@@ -9,19 +37,9 @@ export const loader: LoaderFunction = () => {
     day: '2-digit'
   }).format(new Date()).replace(/\//g, '-');
 
-  // Get all blog posts
   const posts = getPosts();
+  const staticRoutes = getRoutes();
 
-  // console.log(posts)
-
-  // Define static routes
-  const staticRoutes = [
-    { path: "", priority: "1.0" },
-    { path: "freelancer", priority: "0.8" },
-    { path: "business", priority: "0.8" },
-  ];
-
-  // Generate URLs for static routes
   const staticUrls = staticRoutes.map(route => `
   <url>
     <loc>${baseUrl}${route.path ? `/${route.path}` : ""}</loc>
