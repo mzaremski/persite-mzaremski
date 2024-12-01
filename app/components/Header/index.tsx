@@ -1,4 +1,5 @@
 import { Flex, Avatar } from "@radix-ui/themes";
+import persiteData from "../../../persite-data";
 import { TypeAnimation } from "react-type-animation"; 
 
 export default function Header({ ogImage }: { ogImage?: boolean }) {
@@ -22,15 +23,7 @@ export default function Header({ ogImage }: { ogImage?: boolean }) {
           A<TypeAnimation
             speed={2}
             repeat={Infinity}
-            sequence={[
-              "\ developer",
-              "n indie hacker",
-              "\ freelancer ",
-              "n entrepreneur",
-              "\ photograper",
-              "\ surfer",
-              "\ cyclist",
-            ]}
+            sequence={persiteData.headerSection.typeAnimationSequence}
           />
         </span>
           )

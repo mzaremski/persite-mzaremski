@@ -26,6 +26,38 @@ export const meta: MetaFunction = () => {
   });
 };
 
+const AccordionSection = () => {
+  return (
+    <Section size="1">
+      <h2>{persiteData.accordionSection.title}</h2>
+      <AccordionDemo/>
+    </Section>
+  )
+}
+
+const ProjectsSection = () => {
+  return (
+    <Section size="1">
+      <h2>{persiteData.projectsSection.title}</h2>
+      <ul className="project_list">
+        {
+          persiteData.projectsSection.items.map((item) => (
+          <li className="project_list_item" key={item.title}>
+            <Link to={item.link}>
+              <span>{item.title}</span>
+              <Badge color={item.badgeColor}>
+                {item.status === 'in_progress' && <Spinner size="1" style={{ display: 'inline-block', }} />}
+                {item.badge}
+              </Badge>
+            </Link>
+          </li>
+          ))
+        }
+      </ul>
+    </Section>
+  );
+}
+
 export default function Index() {
   return (
     <>
@@ -41,36 +73,39 @@ export default function Index() {
               </p>
             </Section>
 
-            <Section size="1">
-              <h2>{persiteData.accordionSection.title}</h2>
-              <AccordionDemo/>
-            </Section>
+            <div style={{ marginBottom: '42px' }}>
+              {
+                persiteData.theme.projectSectionFirst
+                ? (
+                  <>
+                    <ProjectsSection/>
+                    <AccordionSection/>
+                  </>
+                )
+                : (
+                  <>
+                    <AccordionSection/>
+                    <ProjectsSection/>
+                  </>
+                )
+              }
+            </div>
 
-            <Section size="1">
-              <h2>{persiteData.projectsSection.title}</h2>
-              <ul className="project_list">
-                {
-                  persiteData.projectsSection.items.map((item) => (
-                  <li className="project_list_item" key={item.title}>
-                    <Link to={item.link}>
-                      <span>{item.title}</span>
-                      <Badge color={item.badgeColor}>
-                        {item.status === 'in_progress' && <Spinner size="1" style={{ display: 'inline-block', }} />}
-                        {item.badge}
-                      </Badge>
-                    </Link>
-                  </li>
-                  ))
-                }
-              </ul>
-            </Section>
 
             {/* TODO: Pro version  */}
             {/* <WaitlistForm /> */}
             {/* <div style={{ marginBottom  : '160px' }}></div> */}
 
             {/* // TODO: Change to Flex */}
-            <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: `repeat(${persiteData.socialSection.length}, 1fr)`, gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>
+            <Box width="100%" height="60px" style={{
+                display: 'grid',
+                gridTemplateColumns: `repeat(${persiteData.socialSection.length}, 1fr)`,
+                gap: '0px',
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                borderTop: '1px solid var(--gray-a6)',
+              }}>
               {
                 persiteData.socialSection.map((item, index) => (
                   <Box style={{ textAlign: 'center', borderRight: persiteData.socialSection.length-1 === index ? 'none' : '1px solid var(--gray-a6)' }} key={item.link}>
@@ -88,9 +123,13 @@ export default function Index() {
           </Card>
       </Container>
 
-      <Container size="2">
-        <BlogList/>
-      </Container>
+      {
+        persiteData.theme.shouldShowBlogSection && (
+          <Container size="2">
+            <BlogList/>
+          </Container>
+        )
+      }
     </>
   );
 }

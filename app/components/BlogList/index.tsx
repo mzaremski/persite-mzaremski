@@ -11,7 +11,7 @@ export default function BlogList() {
 
       <Grid columns="2" gap="3">
         {posts.map(({meta: {title, description}, path}) => (
-          <Card size="1" variant="surface">
+          <Card size="1" variant="surface" key={path}>
             <Link to={path} style={{ textDecoration: 'none', color: 'inherit' }} key={path}>
               <h2>{title}</h2>
               <p>{description}</p>

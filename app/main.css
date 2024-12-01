@@ -17,7 +17,6 @@ body h1, h2, h3, h4, h5, h6, p, span, div, li {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 42px;
 }
 
 .project_list .project_list_item {

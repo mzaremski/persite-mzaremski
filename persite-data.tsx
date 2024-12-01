@@ -70,21 +70,24 @@ const persiteData: any = {
   pageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
   theme: {
     mode: 'dark',
-    projectSectionFirst: false, // TODO
+    projectSectionFirst: false,
+    shouldShowBlogSection: true,
   },
   headerSection: {
     personalDescription: 'A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.',
     personalSlogan: 'Startup mentality & happy to help you grow!',
-    typeAnimationSequence: [ // TODO
-      'Freelancer',
-      'Indie Hacker',
-      'Photographer',
-      'Surfer',
-      'Cyclist',
+    typeAnimationSequence: [
+      "\ developer",
+      "n indie hacker",
+      "\ freelancer ",
+      "n entrepreneur",
+      "\ photograper",
+      "\ surfer",
+      "\ cyclist",
     ]
   },
   accordionSection: {
-    title: 'Work with me as:',
+    title: 'Work with me as',
     items: [
       {title: 'A freelancer', content: FreelancerAccordionContent},
       {title: 'A contractor', content: ContractorAccordionContent},
