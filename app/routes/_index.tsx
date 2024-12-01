@@ -2,11 +2,11 @@ import type { MetaFunction } from "@vercel/remix";
 import { Link } from "@remix-run/react";
 import persiteData from "../../persite-data";
 import { Box, Container, Section, Card, Spinner, Badge } from "@radix-ui/themes";
-import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
 import BlogList from "~/components/BlogList";
 import Header from "~/components/Header";
-import WaitlistForm from "~/components/WaitlistForm";
+// TODO: Pro
+// import WaitlistForm from "~/components/WaitlistForm";
 import { generateMeta } from "~/utils/meta";
 
 export const meta: MetaFunction = () => {
@@ -47,79 +47,43 @@ export default function Index() {
             </Section>
 
             <Section size="1">
-              <h2>Projects</h2>
+              <h2>{persiteData.projectsSection.title}</h2>
               <ul className="project_list">
-                <li className="project_list_item">
-                  <a>
-                    <span>LingoReaders</span>
-                    <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q2 2024</Badge>
-                  </a>
+                {
+                  persiteData.projectsSection.items.map((item) => (
+                  <li className="project_list_item" key={item.title}>
+                    <Link to={item.link}>
+                      <span>{item.title}</span>
+                      <Badge color={item.badgeColor}>
+                        {item.status === 'in_progress' && <Spinner size="1" style={{ display: 'inline-block', }} />}
+                        {item.badge}
+                      </Badge>
+                    </Link>
                   </li>
-                <li className="project_list_item">
-                  <a>
-                    Propsify <Badge color="gray"><Spinner size="1" style={{ display: 'inline-block', }} />Q1 2024</Badge>
-                  </a>
-                  </li>
-                <li className="project_list_item">
-                  <Link to="/persite">
-                    PerSite <Badge color="green">2024 | Free</Badge>
-                  </Link>
-                  </li>
-                <li className="project_list_item">
-                  <a href="https://gpxoverlay.com?utm_source=mzaremski">
-                    GpxOverlay <Badge color="green">1k$/m</Badge>
-                  </a>
-                  </li>
-                <li className="project_list_item">
-                  <a href="https://ikonate.com?utm_source=mzaremski">
-                    Ikonate <Badge color="indigo">2018 | Free</Badge>
-                  </a>
-                </li>
+                  ))
+                }
               </ul>
             </Section>
 
-            <WaitlistForm />
-            
-            <div style={{ marginBottom  : '160px' }}></div>
+            {/* TODO: Pro version  */}
+            {/* <WaitlistForm /> */}
+            {/* <div style={{ marginBottom  : '160px' }}></div> */}
 
             {/* // TODO: Change to Flex */}
-            <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>
-              <Box style={{borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a
-                  href="https://www.linkedin.com/in/marcin-zaremski-8b3b4714b/"
-                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
-                  target="_blank" rel="noreferrer"
-                >
-                  <LinkedInLogoIcon />
-                </a>
-              </Box>
-              <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a
-                  href="https://x.com/marcinzaremski"
-                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
-                  target="_blank" rel="noreferrer"
-                >
-                  <TwitterLogoIcon />
-                </a>
-              </Box>
-              <Box style={{ borderRight: '1px solid var(--gray-a6)', textAlign: 'center' }}>
-                <a
-                  href="https://instagram.com/mrrrcin"
-                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
-                  target="_blank" rel="noreferrer"
-                >
-                  <InstagramLogoIcon />
-                </a>
-              </Box>
-              <Box style={{ textAlign: 'center' }}>
-                <a
-                  href="https://github.com/mzaremski"
-                  style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
-                  target="_blank" rel="noreferrer"
-                >
-                  <GitHubLogoIcon/>
-                </a>
-              </Box>
+            <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: `repeat(${persiteData.socialSection.length}, 1fr)`, gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>
+              {
+                persiteData.socialSection.map((item, index) => (
+                  <Box style={{ textAlign: 'center', borderRight: persiteData.socialSection.length-1 === index ? 'none' : '1px solid var(--gray-a6)' }} key={item.link}>
+                    <Link
+                      to={item.link}
+                      style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
+                      target="_blank" rel="noreferrer"
+                    >
+                      {item.icon()}
+                    </Link>
+                  </Box>
+                ))
+              }
             </Box>
           </Card>
       </Container>

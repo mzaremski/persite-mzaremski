@@ -1,3 +1,4 @@
+import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import React from "react";
 
 const FreelancerAccordionContent = () => {
@@ -61,7 +62,8 @@ const FullTimeHireAccordionContent = () => {
   )
 }
 
-const data = {
+// TODO: Type
+const persiteData: any = {
   name: 'Marcin Zaremski',
   slogan: 'Freelancer & Indie Hacker',
   pageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
@@ -89,7 +91,53 @@ const data = {
       {title: 'A full time hire', content: FullTimeHireAccordionContent},
       {title: 'An indie hacker', content: IndieHackerAccordionContent},
     ]
-  }
+  },
+  projectsSection: {
+    title: 'Projects',
+    items: [
+      {
+        title: 'LingoReaders',
+        status: 'in_progress',
+        badge: 'Q2 2024',
+        badgeColor: 'gray',
+        link: 'https://lingoreaders.com',
+      },
+      {
+        title: 'Propsify',
+        status: 'in_progress',
+        badgeColor: 'gray',
+        badge: 'Q1 2024',
+        link: '/propsify',
+      },
+      {
+        title: 'PerSite',
+        status: 'released',
+        badgeColor: 'gray',
+        badge: 'Q2 2024',
+        link: '/persite',
+      },
+      {
+        title: 'GpxOverlay',
+        status: 'released',
+        badgeColor: 'green',
+        badge: '1k$/m',
+        link: 'https://gpxoverlay.com',
+      },
+      {
+        title: 'Ikonate',
+        status: 'released',
+        badgeColor: 'indigo',
+        badge: '2018 | Free',
+        link: 'https://ikonate.com',
+      },
+    ]
+  },
+  socialSection: [
+    {icon: () => <LinkedInLogoIcon />, link: 'https://www.linkedin.com/in/marcin-zaremski-8b3b4714b/'},
+    {icon: () => <TwitterLogoIcon />, link: 'https://x.com/marcinzaremski'},
+    {icon: () => <InstagramLogoIcon />, link: 'https://instagram.com/mrrrcin'},
+    {icon: () => <GitHubLogoIcon />, link: 'https://github.com/mzaremski'},
+  ]
 }
 
-export default data;
+export default persiteData;
