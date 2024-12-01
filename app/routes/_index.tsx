@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@vercel/remix";
 import { Link } from "@remix-run/react";
-import data from "../../persite-data";
+import persiteData from "../../persite-data";
 import { Box, Container, Section, Card, Spinner, Badge } from "@radix-ui/themes";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
@@ -8,11 +8,10 @@ import BlogList from "~/components/BlogList";
 import Header from "~/components/Header";
 import WaitlistForm from "~/components/WaitlistForm";
 import { generateMeta } from "~/utils/meta";
-  
 
 export const meta: MetaFunction = () => {
-  const title = data.pageTitle;
-  const description = data.pageDescription;
+  const title = persiteData.pageTitle;
+  const description = persiteData.pageDescription;
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
   
   // TODO: This will be for pro
@@ -35,15 +34,15 @@ export default function Index() {
             <Section size="1">
               <Header/>
               <p style={{ paddingTop: '1em' }}>
-                A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.
+                {persiteData.headerSection.personalDescription}
               </p>
               <p>
-                Startup mentality & happy to help you grow!
+                {persiteData.headerSection.personalSlogan}
               </p>
             </Section>
 
             <Section size="1">
-              <h2>Work with me as:</h2>
+              <h2>{persiteData.accordionSection.title}</h2>
               <AccordionDemo/>
             </Section>
 
