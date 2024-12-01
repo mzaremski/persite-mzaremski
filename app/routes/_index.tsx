@@ -6,7 +6,9 @@ import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } 
 import AccordionDemo from "~/components/Accordion";
 import BlogList from "~/components/BlogList";
 import Header from "~/components/Header";
+import WaitlistForm from "~/components/WaitlistForm";
 import { generateMeta } from "~/utils/meta";
+  
 
 export const meta: MetaFunction = () => {
   const title = data.pageTitle;
@@ -76,6 +78,10 @@ export default function Index() {
                 </li>
               </ul>
             </Section>
+
+            <WaitlistForm />
+            
+            <div style={{ marginBottom  : '160px' }}></div>
 
             {/* // TODO: Change to Flex */}
             <Box width="100%" height="60px" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0px', position: 'absolute', bottom: '0', left: '0', borderTop: '1px solid var(--gray-a6)' }}>

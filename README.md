@@ -10,7 +10,7 @@ npx create-remix@latest --template vercel/vercel/examples/remix
 
 ## Deploy Your Own
 
-[![One click deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&env=REDIS_URL,REDIS_TOKEN&integration-ids=oac_V3R1GIpkoJorr6fQr83xK2Hh)
 
 _Live Example: https://remix-run-template.vercel.app_
 
