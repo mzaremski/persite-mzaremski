@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@vercel/remix";
-import { useLocation , Link } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import data from "../../persite-data";
-import { Box, Container, Section, Card, Spinner, Badge, Avatar, Flex } from "@radix-ui/themes";
+import { Box, Container, Section, Card, Spinner, Badge } from "@radix-ui/themes";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import AccordionDemo from "~/components/Accordion";
 import BlogList from "~/components/BlogList";
