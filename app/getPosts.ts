@@ -15,7 +15,7 @@ export const getPosts = (): Post[] => {
   
   return Object.entries(rawPosts).map(([path, data]) => {
     const {title, description} = (data as any).meta[0];
-    const postFileName = path.replace("routes/posts.", "").replace(".mdx", "");
+    const postFileName = path.replace("./routes/posts.", "").replace(".mdx", "");
 
     return {
       meta: {
