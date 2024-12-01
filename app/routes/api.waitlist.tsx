@@ -1,9 +1,24 @@
 import { json } from '@remix-run/node';
-import { kv } from '@vercel/kv';
+import { MongoClient } from 'mongodb';
 
 interface WaitlistResponse {
   success?: boolean;
   error?: string;
+}
+
+const uri:string = process.env.MONGODB_URI as string;
+if (!uri) {
+  throw new Error('MONGODB_URI is not defined');
+}
+
+let client: MongoClient;
+
+async function getCollection() {
+  if (!client) {
+    client = new MongoClient(uri);
+    await client.connect();
+  }
+  return client.db('waitlist').collection('subscribers');
 }
 
 export async function action({ request }: { request: Request }) {
@@ -20,13 +35,30 @@ export async function action({ request }: { request: Request }) {
       return json<WaitlistResponse>({ error: 'Email and name are required' }, { status: 400 });
     }
 
-    // Store in Vercel KV
-    const timestamp = new Date().toISOString();
-    await kv.hset(`waitlist:${email}`, {
-      email,
-      name,
-      timestamp,
-    });
+    const collection = await getCollection();
+    
+    // Check if email already exists
+    const existing = await collection.findOne({ email });
+    if (existing) {
+      // Update existing entry
+      await collection.updateOne(
+        { email },
+        { 
+          $set: { 
+            name,
+            updatedAt: new Date()
+          }
+        }
+      );
+    } else {
+      // Create new entry
+      await collection.insertOne({
+        email,
+        name,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+    }
 
     return json<WaitlistResponse>({ success: true });
   } catch (error) {
