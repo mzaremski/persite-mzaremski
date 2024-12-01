@@ -10,7 +10,7 @@ npx create-remix@latest --template vercel/vercel/examples/remix
 
 ## Deploy Your Own
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&env=MONGODB_URI&integration-ids=oac_jnzw1p0i7ah3)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&env=MONGODB_URI&integration-ids=oac_jnzw1p0i7ah3&skippable-integrations=1)
 
 _Live Example: https://remix-run-template.vercel.app_
 
