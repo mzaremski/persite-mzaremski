@@ -1,3 +1,4 @@
+// TODO: Pro + fix MONGODB_URI address. Works overall, but fails on vercel
 import { json } from '@remix-run/node';
 import { MongoClient } from 'mongodb';
 
@@ -6,10 +7,10 @@ interface WaitlistResponse {
   error?: string;
 }
 
-const uri:string = process.env.MONGODB_URI as string;
-if (!uri) {
-  throw new Error('MONGODB_URI is not defined');
-}
+// const uri:string = process.env.MONGODB_URI as string;
+// if (!uri) {
+//   throw new Error('MONGODB_URI is not defined');
+// }
 
 let client: MongoClient;
 
