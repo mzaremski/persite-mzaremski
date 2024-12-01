@@ -13,7 +13,9 @@ export const meta: MetaFunction = () => {
   const description = data.pageDescription;
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
   
-  const ogImageUrl = `${origin}/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+  // TODO: This will be for pro
+  // const ogImageUrl = `${origin}/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+  const ogImageUrl = `${origin}/og`;
 
   return generateMeta({
     title,
