@@ -1,40 +1,50 @@
+import persiteData from "persite-data";
+
 interface MetaFunction {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   image?: string;
   url?: string;
+  author?: string;
+  siteName?: string;
+  type?: string;
+  locale?: string;
+  twitterUsername?: string;
 }
 
 export function generateMeta({
-  title = 'Default Title',
-  description = 'Default description for the page',
+  title,
+  description,
   image,
   url,
+  siteName,
+  type = 'website',
+  locale = 'en_US',
 }: MetaFunction) {
-  const meta = [
+  return [
     { title },
     { name: 'description', content: description },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { charset: 'UTF-8' },
+    { name: 'author', content: persiteData.seo.twitterUsername },
+
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },
-    { property: 'og:type', content: 'website' },
-    { property: 'twitter:card', content: 'summary_large_image' },
-    { property: 'twitter:title', content: title },
-    { property: 'twitter:description', content: description },
-  ];
-
-  if (url) {
-    meta.push(
+    { property: 'og:type', content: type },
+    { property: 'og:locale', content: locale },
+    ...(siteName ? [{ property: 'og:site_name', content: siteName }] : []),
+    ...(persiteData.seo.twitterUsername ? [
+      { name: 'twitter:site', content: `@${persiteData.seo.twitterUsername}` },
+      { name: 'twitter:creator', content: `@${persiteData.seo.twitterUsername}` }
+    ] : []),
+    ...(url ? [
       { property: 'og:url', content: url },
-      { property: 'twitter:url', content: url }
-    );
-  }
-
-  if (image) {
-    meta.push(
+      { name: 'twitter:url', content: url },
+    ] : []),
+    ...(image ? [
       { property: 'og:image', content: image },
-      { property: 'twitter:image', content: image }
-    );
-  }
-
-  return meta;
+      { name: 'twitter:image', content: image },
+      { property: 'og:image:alt', content: title }
+    ] : []),
+  ];
 }
