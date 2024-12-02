@@ -1,3 +1,4 @@
+import type {BadgeProps, ThemeProps} from '@radix-ui/themes';
 export interface PersiteSource {
     name: string;
     slogan: string;
@@ -8,13 +9,7 @@ export interface PersiteSource {
       shouldShowBlogSection: boolean;
       blogInsideMainCard: boolean;
       background: string;
-      radixConfig: {
-        appearance: 'dark' | 'light';
-        accentColor: string;
-        grayColor: string;
-        radius: string;
-        scaling: string;
-      };
+      radixConfig: ThemeProps,
     };
     seo: {
       author: string;
@@ -39,7 +34,7 @@ export interface PersiteSource {
         title: string;
         status: 'in_progress' | 'released';
         badge: string;
-        badgeColor: string;
+        badgeColor: BadgeProps['color'];
         link: string;
       }>;
     };
