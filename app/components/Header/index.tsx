@@ -11,7 +11,7 @@ export default function Header({ ogImage }: { ogImage?: boolean }) {
         size="7"
       />
       <div>
-        <h1 style={{ fontSize: '2.5rem', margin: '0' }}>Marcin Zaremski</h1>
+        <h1 style={{ fontSize: '2.5rem', margin: '0' }}>{persiteSource.name}</h1>
         {
           ogImage
           ? (
