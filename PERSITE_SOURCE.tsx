@@ -124,7 +124,7 @@ const persiteData: any = {
         status: 'in_progress',
         badge: 'Q2 2024',
         badgeColor: 'gray',
-        link: 'https://lingoreaders.com',
+        link: 'https://lingoreaders.com/?utm_source=mzaremski.com',
       },
       {
         title: 'Propsify',
@@ -145,14 +145,14 @@ const persiteData: any = {
         status: 'released',
         badgeColor: 'green',
         badge: '1k$/m',
-        link: 'https://gpxoverlay.com',
+        link: 'https://gpxoverlay.com/?utm_source=mzaremski.com',
       },
       {
         title: 'Ikonate',
         status: 'released',
         badgeColor: 'indigo',
         badge: '2018 | Free',
-        link: 'https://ikonate.com',
+        link: 'https://ikonate.com/?utm_source=mzaremski.com',
       },
     ]
   },

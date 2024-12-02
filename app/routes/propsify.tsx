@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@vercel/remix";
-import { Container, Card, Separator, Link, Button } from "@radix-ui/themes";
+import { Container, Card, Separator, Button } from "@radix-ui/themes";
+import { Link } from "@remix-run/react";
 import Header from "~/components/Header";
 import { generateMetaTags } from "~/utils/generateMetaTags";
 
