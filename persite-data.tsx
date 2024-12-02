@@ -62,6 +62,13 @@ const FullTimeHireAccordionContent = () => {
   )
 }
 
+/*
+  Fill the persiteData with your own content. 
+  Additionally, you need to:
+    - change avatar.jpg picture to your own
+    - .......
+*/
+
 // TODO: Type
 const persiteData: any = {
   name: 'Marcin Zaremski',
@@ -74,6 +81,13 @@ const persiteData: any = {
     shouldShowBlogSection: true,
     blogInsideMainCard: false,
     background: 'FlyingOrbes',
+    radixConfig: {
+      appearance: 'dark',
+      accentColor: 'indigo',
+      grayColor: 'slate',
+      radius: 'full',
+      scaling: '110%',
+    }
   },
   seo: {
     author: 'Marcin Zaremski',

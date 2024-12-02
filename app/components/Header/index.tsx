@@ -5,7 +5,6 @@ import { TypeAnimation } from "react-type-animation";
 export default function Header({ ogImage }: { ogImage?: boolean }) {
   return (
     <Flex gap="4" align="center">
-      {/* PERSITE_TODO_CHANGE_ME: */}
       <Avatar
         src="../avatar.jpg"
         fallback="A"

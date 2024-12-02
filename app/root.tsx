@@ -29,14 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       </head>
       <body>
-        {/* PERSITE_TODO_CHANGE_ME: */}
-        <Theme
-          appearance="dark"
-          accentColor="indigo"
-          grayColor="slate"
-          radius="full"
-          scaling="110%"
-        >
+        <Theme {...persiteData.theme.radixConfig}>
           {/* @ts-ignore */}
           {Backgrounds[persiteData.theme.background]()}
 
