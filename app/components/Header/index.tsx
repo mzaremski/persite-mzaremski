@@ -1,5 +1,5 @@
 import { Flex, Avatar } from "@radix-ui/themes";
-import persiteData from "../../../persite-data";
+import persiteData from 'PERSITE_DATA';
 import { TypeAnimation } from "react-type-animation"; 
 
 export default function Header({ ogImage }: { ogImage?: boolean }) {

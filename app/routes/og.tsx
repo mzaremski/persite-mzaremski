@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 import type { LoaderFunctionArgs } from '@remix-run/node';
-import persiteData from '../../persite-data';
+import persiteData from 'PERSITE_DATA';
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);

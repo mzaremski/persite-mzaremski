@@ -14,7 +14,7 @@ import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import * as Backgrounds from "./components/Backgrounds";
-import persiteData from "../persite-data";
+import persiteData from 'PERSITE_DATA';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
