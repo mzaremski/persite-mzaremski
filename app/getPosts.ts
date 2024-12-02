@@ -1,4 +1,3 @@
-
 type Post = {
   meta: {
     title: string;
@@ -8,19 +7,19 @@ type Post = {
 } 
 
 export const getPosts = (): Post[] => {
-  const rawPosts = import.meta.glob(
+  const rawPostsData = import.meta.glob(
     "./routes/posts.*.mdx",
     { eager: true }
   );
-  
-  return Object.entries(rawPosts).map(([path, data]) => {
-    const {title, description} = (data as any).meta[0];
+
+  return Object.entries(rawPostsData).map(([path, data]) => {
+    const postData = (data as any).postData;
     const postFileName = path.replace("./routes/posts.", "").replace(".mdx", "");
 
     return {
       meta: {
-        title,
-        description,
+        title: postData.title,
+        description: postData.description,
       },
       path: `/posts/${postFileName}`,
     }
