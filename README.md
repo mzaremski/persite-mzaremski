@@ -1,38 +1,50 @@
-# Remix
+# Persite
 
-This directory is a brief example of a [Remix](https://remix.run/docs) site that can be deployed to Vercel with zero configuration.
+One-click, customizable, 10min boilerplate personal website to boost your SEO and visibility on the internet.
 
-To get started, run the Remix cli with this template
+<img width="1052" alt="image" src="https://github.com/user-attachments/assets/e4451dc2-4ac9-4af6-a3cb-316ea3dec1a6">
 
-```sh
-npx create-remix@latest --template vercel/vercel/examples/remix
-```
-
-## Deploy Your Own
+## One click deploy
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&integration-ids=icfg_ndUd3CDM3wwcQ28MmoPEg7sq&skippable-integrations=1)
+Live Example: https://mzaremski.com/
 
-_Live Example: https://remix-run-template.vercel.app_
+Designed from Indie Hacker for Indie Hackers
 
-You can also deploy using the [Vercel CLI](https://vercel.com/docs/cli):
+## Tech stack
 
-```sh
-pnpm i -g vercel
-vercel
-```
+What is this?
 
-## Development
+## Tech stack
 
-To run your Remix app locally, make sure your project's local dependencies are installed:
+- [Remix](https://remix.run/docs)
+- [Radix Themes](https://www.radix-ui.com/themes)
+- [Vercel](https://vercel.com)
+- [MDX](https://mdxjs.com/)
+- Ract
+- TypeScript
 
-```sh
-pnpm install
-```
+## Getting Started
 
-Afterwards, start the Remix development server like so:
+1. Click "Deploy" at the top of the file.
+2. Clone the repository was created by Vercel.
+3. Install: `pnpm install`
+4. Open `PERSITE_SOURCE.tsx` and change the values to your own.
+   - To customize theme, you can check this: https://www.radix-ui.com/themes/playground and find the colors you like. Copy the settings and paste into `persiteSource.theme.radixConfig` in the `PERSITE_SOURCE` file
+5. Start the development server: `pnpm run dev`
+6. Push to preview changes on your live website.
 
-```sh
-pnpm run dev
-```
+## Useful links
 
-Open up [http://localhost:5173](http://localhost:5173) and you should be ready to go!
+1. Remix - MDX Rollup plugin integration: [Remix.run: Add MDX plugion](https://remix.run/docs/en/main/guides/vite#add-mdx-plugin)
+2. Persite Landingpage: https://mzaremski.com/persite#pro
+3. **✨Check PRO plan of Persite Boilerplate✨**: https://mzaremski.com/persite#pro
+
+To run your Remix app locally, make sure your project's local dependencies are installed
+
+## Author
+
+by Marcin Zaremski
+GitHub: https://github.com/mzaremski/persitehttps://github.com/mzaremsk
+Website: https://mzaremski.com/
+Twitter: https://twitter.com/marcinzaremski
