@@ -2,7 +2,7 @@ import React from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import persiteData from "PERSITE_DATA";
+import persiteData from "PERSITE_SOURCE";
 
 // TODO: Move Accordion to sections
 

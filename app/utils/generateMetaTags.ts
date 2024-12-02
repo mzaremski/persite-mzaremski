@@ -1,4 +1,4 @@
-import persiteData from "PERSITE_DATA";
+import persiteData from "PERSITE_SOURCE";
 
 interface MetaFunction {
   title: string;

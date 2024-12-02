@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@vercel/remix";
 import { Link } from "@remix-run/react";
-import persiteData from 'PERSITE_DATA';
+import persiteData from 'PERSITE_SOURCE';
 import { Box, Container, Section, Card, Spinner, Badge } from "@radix-ui/themes";
 import AccordionDemo from "~/components/Accordion";
 import BlogList from "~/components/BlogList";
