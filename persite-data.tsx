@@ -73,6 +73,7 @@ const persiteData: any = {
     projectSectionFirst: false,
     shouldShowBlogSection: true,
     blogInsideMainCard: false,
+    background: 'FlyingOrbes',
   },
   seo: {
     author: 'Marcin Zaremski',

@@ -7,17 +7,14 @@ import {
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Theme } from "@radix-ui/themes";
-import * as Backgrounds from "./components/Backgrounds/Backgrounds";
 import radixStyles from "@radix-ui/themes/styles.css?url";
 import FontStyles from "@fontsource/lexend/index.css?url";
 import styles from "~/main.css?url";
-import stylesFlyingOrbes from "~/components/Backgrounds/background-flying-orbes.css?url";
-import stylesPerlinNoise from "~/components/Backgrounds/background-perlin-noise.css?url";
-import stylesShootingStars from "~/components/Backgrounds/background-shooting-stars.css?url";
-import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-stars.css?url";
 import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 import type { LoaderFunctionArgs } from "@remix-run/node";
+import * as Backgrounds from "./components/Backgrounds";
+import persiteData from "../persite-data";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -40,8 +37,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           radius="full"
           scaling="110%"
         >
-          {/* PERSITE_TODO_CHANGE_ME: */}
-          <Backgrounds.FlyingOrbes />
+          {/* @ts-ignore */}
+          {Backgrounds[persiteData.theme.background]()}
+
           <main style={{ paddingTop: '2vw', paddingLeft: '2vw', paddingRight: '2vw', paddingBottom: '5vw' }}>
             {children}
           </main>
@@ -68,10 +66,6 @@ export function links() {
     { rel: "stylesheet", href: radixStyles },
     { rel: "stylesheet", href: FontStyles },
     { rel: "stylesheet", href: styles },
-    { rel: "stylesheet", href: stylesPerlinNoise },
-    { rel: "stylesheet", href: stylesFlyingOrbes },
-    { rel: "stylesheet", href: stylesShootingStars },
-    { rel: "stylesheet", href: stylesParallaxyStars },
     { rel: "stylesheet", href: stylesAccordion },
    // TODO: Make the icon dynamic based on a default radix theme
     { rel: "icon", href: "/icon.png" },
