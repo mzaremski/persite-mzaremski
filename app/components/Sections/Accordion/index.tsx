@@ -4,38 +4,44 @@ import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import persiteData from "PERSITE_SOURCE";
 import { Section } from "@radix-ui/themes"
+import type { ComponentProps } from "react";
 
-const AccordionTrigger = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => (
-    <Accordion.Header className="AccordionHeader">
-      <Accordion.Trigger
-        className={classNames("AccordionTrigger", className)}
-        {...props}
-        ref={forwardedRef}
-      >
-        {children}
-        <ChevronDownIcon className="AccordionChevron" aria-hidden />
-      </Accordion.Trigger>
-    </Accordion.Header>
-  ),
+interface AccordionTriggerProps extends ComponentProps<typeof Accordion.Trigger> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const AccordionTrigger = ({ children, className, ...props }: AccordionTriggerProps) => (
+  <Accordion.Header className="AccordionHeader">
+    <Accordion.Trigger
+      className={classNames("AccordionTrigger", className)}
+      {...props}
+    >
+      {children}
+      <ChevronDownIcon className="AccordionChevron" aria-hidden />
+    </Accordion.Trigger>
+  </Accordion.Header>
 );
 
-const AccordionContent = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => (
-    <Accordion.Content
-      className={classNames("AccordionContent", className)}
-      {...props}
-      ref={forwardedRef}
-    >
-      <div className="AccordionContentText">{children}</div>
-    </Accordion.Content>
-  ),
+interface AccordionContentProps extends ComponentProps<typeof Accordion.Content> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const AccordionContent = ({ children, className, ...props }: AccordionContentProps) => (
+  <Accordion.Content
+    className={classNames("AccordionContent", className)}
+    {...props}
+  >
+    <div className="AccordionContentText">{children}</div>
+  </Accordion.Content>
 );
 
 const AccordionComponent = () => (
   <Accordion.Root
     className="AccordionRoot"
     collapsible
+    type="single"
   >
     {persiteData.accordionSection.items.map((item, index) => (
       <Accordion.Item
