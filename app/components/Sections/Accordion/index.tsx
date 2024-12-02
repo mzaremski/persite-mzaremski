@@ -3,8 +3,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import persiteData from "PERSITE_SOURCE";
-
-// TODO: Move Accordion to sections
+import { Section } from "@radix-ui/themes"
 
 const AccordionTrigger = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => (
@@ -33,7 +32,7 @@ const AccordionContent = React.forwardRef(
   ),
 );
 
-const AccordionDemo = () => (
+const AccordionComponent = () => (
   <Accordion.Root
     className="AccordionRoot"
     collapsible
@@ -51,4 +50,13 @@ const AccordionDemo = () => (
   </Accordion.Root>
 );
 
-export default AccordionDemo;
+const AccordionSection = () => {
+  return (
+    <Section size="1">
+      <h2>{persiteData.accordionSection.title}</h2>
+      <AccordionComponent />
+    </Section>
+  );
+};
+
+export default AccordionSection;

@@ -1,50 +1,20 @@
 import type { MetaFunction } from "@vercel/remix";
 import { Link } from "@remix-run/react";
 import persiteData from 'PERSITE_SOURCE';
-import { Box, Container, Section, Card, Spinner, Badge } from "@radix-ui/themes";
-import AccordionDemo from "~/components/Accordion";
-import BlogList from "~/components/BlogList";
+import { Box, Container, Section, Card} from "@radix-ui/themes";
+import AccordionSection from "~/components/Sections/Accordion";
 import Header from "~/components/Header";
+
 // TODO: Pro
 // import WaitlistForm from "~/components/WaitlistForm";
 import { generateMetaTags } from "~/utils/generateMetaTags";
+import ProjectsSection from "~/components/Sections/ProjectsSection";
+import BlogSection from "~/components/Sections/BlogSection";
 
 export const meta: MetaFunction = () => generateMetaTags({
   title: persiteData.mainPageTitle,
   description: persiteData.mainPageDescription,
 });
-
-const AccordionSection = () => {
-  return (
-    <Section size="1">
-      <h2>{persiteData.accordionSection.title}</h2>
-      <AccordionDemo/>
-    </Section>
-  )
-}
-
-const ProjectsSection = () => {
-  return (
-    <Section size="1">
-      <h2>{persiteData.projectsSection.title}</h2>
-      <ul className="project_list">
-        {
-          persiteData.projectsSection.items.map((item) => (
-          <li className="project_list_item" key={item.title}>
-            <Link to={item.link}>
-              <span>{item.title}</span>
-              <Badge color={item.badgeColor}>
-                {item.status === 'in_progress' && <Spinner size="1" style={{ display: 'inline-block', }} />}
-                {item.badge}
-              </Badge>
-            </Link>
-          </li>
-          ))
-        }
-      </ul>
-    </Section>
-  );
-}
 
 export default function Index() {
   return (
@@ -80,9 +50,7 @@ export default function Index() {
 
               {
                 persiteData.theme.shouldShowBlogSection && persiteData.theme.blogInsideMainCard && (
-                  <Container size="2">
-                    <BlogList/>
-                  </Container>
+                  <BlogSection/>
                 )
               }
             </div>
@@ -122,7 +90,7 @@ export default function Index() {
       {
         persiteData.theme.shouldShowBlogSection && !persiteData.theme.blogInsideMainCard && (
           <Container size="2">
-            <BlogList/>
+            <BlogSection/>
           </Container>
         )
       }

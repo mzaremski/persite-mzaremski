@@ -2,11 +2,11 @@ import { Card, Grid, Section } from "@radix-ui/themes";
 import { Link } from "@remix-run/react";
 import { getPosts } from "~/getPosts";
 
-export default function BlogList() {
+export default function BlogSection() {
   const posts = getPosts();
 
   return (
-    <Section id="blog-list">
+    <Section id="blog-list" size="1">
       <h2>Blog</h2>
 
       <Grid columns="2" gap="3">
