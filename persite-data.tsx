@@ -66,12 +66,17 @@ const FullTimeHireAccordionContent = () => {
 const persiteData: any = {
   name: 'Marcin Zaremski',
   slogan: 'Freelancer & Indie Hacker',
-  pageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
-  pageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
+  mainPageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
+  mainPageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
   theme: {
     mode: 'dark',
     projectSectionFirst: false,
     shouldShowBlogSection: true,
+  },
+  seo: {
+    author: 'Marcin Zaremski',
+    twitterUsername: 'marcinzaremski',
+    locale: 'en_US',
   },
   headerSection: {
     personalDescription: 'A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.',

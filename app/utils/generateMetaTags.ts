@@ -4,22 +4,14 @@ interface MetaFunction {
   title: string;
   description: string;
   image?: string;
-  url?: string;
-  author?: string;
-  siteName?: string;
-  type?: string;
-  locale?: string;
-  twitterUsername?: string;
+  type?: 'website' | 'article';
 }
 
-export function generateMeta({
+export function generateMetaTags({
   title,
   description,
-  image,
-  url,
-  siteName,
+  image = '/og',
   type = 'website',
-  locale = 'en_US',
 }: MetaFunction) {
   return [
     { title },
@@ -31,15 +23,15 @@ export function generateMeta({
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },
     { property: 'og:type', content: type },
-    { property: 'og:locale', content: locale },
-    ...(siteName ? [{ property: 'og:site_name', content: siteName }] : []),
+    { property: 'og:locale', content: persiteData.seo.locale },
+    
+    // siteName
+    // og:title might be "My Blog Post About Coding"
+    // og:site_name would be "Marcin Zaremski's Blog"
+    { property: 'og:site_name', content: persiteData.mainPageTitle },
     ...(persiteData.seo.twitterUsername ? [
       { name: 'twitter:site', content: `@${persiteData.seo.twitterUsername}` },
       { name: 'twitter:creator', content: `@${persiteData.seo.twitterUsername}` }
-    ] : []),
-    ...(url ? [
-      { property: 'og:url', content: url },
-      { name: 'twitter:url', content: url },
     ] : []),
     ...(image ? [
       { property: 'og:image', content: image },

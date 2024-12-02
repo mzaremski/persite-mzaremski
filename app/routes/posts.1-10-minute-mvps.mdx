@@ -3,7 +3,12 @@ meta:
   - title: 10-Minute MVPs - The Fastest Way to Validate Ideas
     description: A lightning-fast guide to validating startup ideas with minimal time and maximum speed.
 ---
-export const meta = frontmatter.meta;
+import { generateMetaTags } from "../utils/generateMetaTags";
+export const meta = generateMetaTags({
+  title: frontmatter.meta[0].title,
+  description: frontmatter.meta[0].description,
+  type: 'article',
+});
 
 # 10-Minute MVPs: The Fastest Way to Validate Ideas
 

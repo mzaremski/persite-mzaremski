@@ -7,24 +7,12 @@ import BlogList from "~/components/BlogList";
 import Header from "~/components/Header";
 // TODO: Pro
 // import WaitlistForm from "~/components/WaitlistForm";
-import { generateMeta } from "~/utils/meta";
+import { generateMetaTags } from "~/utils/generateMetaTags";
 
-export const meta: MetaFunction = () => {
-  const title = persiteData.pageTitle;
-  const description = persiteData.pageDescription;
-  const origin = typeof window !== 'undefined' ? window.location.origin : '';
-  
-  // TODO: This will be for pro
-  // const ogImageUrl = `${origin}/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-  const ogImageUrl = `${origin}/og`;
-
-  return generateMeta({
-    title,
-    description,
-    image: ogImageUrl,
-    url: origin,
-  });
-};
+export const meta: MetaFunction = ({ data, params, location }) => generateMetaTags({
+  title: persiteData.mainPageTitle,
+  description: persiteData.mainPageDescription,
+});
 
 const AccordionSection = () => {
   return (
