@@ -17,6 +17,7 @@ import stylesShootingStars from "~/components/Backgrounds/background-shooting-st
 import stylesParallaxyStars from "~/components/Backgrounds/background-parallaxy-stars.css?url";
 import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
+import type { LoaderFunctionArgs } from "@remix-run/node";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -53,6 +54,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
+
+export const loader = ({ request }: LoaderFunctionArgs) => ({
+  host: request.headers.get("host")
+})
 
 export default function App() {
   return <Outlet />;
