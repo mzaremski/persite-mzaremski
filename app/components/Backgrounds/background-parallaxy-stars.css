@@ -2,9 +2,9 @@
 /* To css by: https://gist.github.com/MikhaiTran/7aa49ff3a18549587108b571e20c054b */
 
 #background-parallaxy-stars {
-  height: 0;
+  position: absolute;
+  height: 100vh;
   width: 100vw;
-  overflow: hidden;
   z-index: -1;
 }
 
