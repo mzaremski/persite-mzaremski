@@ -2,72 +2,13 @@ import React from "react";
 import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import type { PersiteSource } from "./persite_source_type";
 
-const FreelancerAccordionContent = () => {
-  return (
-    <div>
-      Does your project need:
-      <ul>
-        <li>Refactoring?</li>
-        <li>More man-hours this sprint?</li>
-        <li>To ship side features silently?</li>
-      </ul>
-
-      In technologies such as:
-      <ul>
-        <li>Typescript/Javascript</li>
-        <li>React/NextJS</li>
-        <li>NodeJS</li>
-        <li>SQL</li>
-        <li>PostgreSQL</li>
-      </ul>
-
-      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br/>
-      Just tell me the name of the project, the kind of work you need, and how often. I will respond ASAP.
-    </div>
-  )
-}
-const ContractorAccordionContent = () => {
-  return (
-    <div>
-      <ul>
-        <li>Do you want to validate and build your startup idea?</li>
-        <li>Do you want to build an MVP?</li>
-        <li>Do you need an internal system?</li>
-        <li>Do you have any problem I can solve with software?</li>
-      </ul>
-      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br />
-      Just tell the name of the company/project, briefly describe it, let me know how much time do you think it can take.
-      I will answer ASAP.
-    </div>
-  )
-}
-
-const IndieHackerAccordionContent = () => {
-  return (
-    <div>
-      <div className="AccordionContentText">
-        Do you want to build a product together? I'm always open to new ideas. Let's brainstorm, plan, and ship it!
-        Mail me here: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a>
-      </div>
-    </div>
-  )
-}
-
-const FullTimeHireAccordionContent = () => {
-  return (
-    <div>
-      <div className="AccordionContentText">
-        My CV (2022, outdated a bit) is here: <a href="/Marcin_Zaremski_Fullstack_CV_2022.pdf">Marcin_Zaremski_Fullstack_CV_2022.pdf</a>
-      </div>
-    </div>
-  )
-}
-
 /*
-  Fill the persiteData with your own content. 
-  Additionally, you need to:
-    - change avatar.jpg picture to your own
-    - .......
+  README:
+  - Fill persiteSource with your own content
+  - Additionally, you need only to change:
+     - public/avatar.jpg picture to your own
+     - public/icon.png
+  - There is no need to change anything else!
 */
 
 const persiteSource: PersiteSource = {
@@ -164,3 +105,64 @@ const persiteSource: PersiteSource = {
 }
 
 export default persiteSource;
+
+function FreelancerAccordionContent() {
+  return (
+    <div>
+      Does your project need:
+      <ul>
+        <li>Refactoring?</li>
+        <li>More man-hours this sprint?</li>
+        <li>To ship side features silently?</li>
+      </ul>
+
+      In technologies such as:
+      <ul>
+        <li>Typescript/Javascript</li>
+        <li>React/NextJS</li>
+        <li>NodeJS</li>
+        <li>SQL</li>
+        <li>PostgreSQL</li>
+      </ul>
+
+      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br/>
+      Just tell me the name of the project, the kind of work you need, and how often. I will respond ASAP.
+    </div>
+  )
+}
+function ContractorAccordionContent () {
+  return (
+    <div>
+      <ul>
+        <li>Do you want to validate and build your startup idea?</li>
+        <li>Do you want to build an MVP?</li>
+        <li>Do you need an internal system?</li>
+        <li>Do you have any problem I can solve with software?</li>
+      </ul>
+      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br />
+      Just tell the name of the company/project, briefly describe it, let me know how much time do you think it can take.
+      I will answer ASAP.
+    </div>
+  )
+}
+
+function IndieHackerAccordionContent () {
+  return (
+    <div>
+      <div className="AccordionContentText">
+        Do you want to build a product together? I'm always open to new ideas. Let's brainstorm, plan, and ship it!
+        Mail me here: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a>
+      </div>
+    </div>
+  )
+}
+
+function FullTimeHireAccordionContent () {
+  return (
+    <div>
+      <div className="AccordionContentText">
+        My CV (2022, outdated a bit) is here: <a href="/Marcin_Zaremski_Fullstack_CV_2022.pdf">Marcin_Zaremski_Fullstack_CV_2022.pdf</a>
+      </div>
+    </div>
+  )
+}
