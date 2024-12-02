@@ -1,5 +1,6 @@
-import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import React from "react";
+import { TwitterLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import type { PersiteSource } from "./persite_source_type";
 
 const FreelancerAccordionContent = () => {
   return (
@@ -69,14 +70,13 @@ const FullTimeHireAccordionContent = () => {
     - .......
 */
 
-// TODO: Type
-const persiteData: any = {
+
+const persiteData: PersiteSource = {
   name: 'Marcin Zaremski',
   slogan: 'Freelancer & Indie Hacker',
   mainPageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
   mainPageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
   theme: {
-    mode: 'dark',
     projectSectionFirst: false,
     shouldShowBlogSection: true,
     blogInsideMainCard: true,

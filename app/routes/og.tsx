@@ -4,9 +4,10 @@ import persiteData from 'PERSITE_SOURCE';
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
-  const fontColor = persiteData.theme.mode === 'dark' ? '#ffffff' : '#000000';
-  const shadowColor = persiteData.theme.mode === 'dark' ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.15)';
-  const backgroundImageSrc = `${url.origin}/ogbackground-${persiteData.theme.mode}.jpg`;
+  const mode = persiteData.theme.radixConfig.appearance;
+  const fontColor = mode === 'dark' ? '#ffffff' : '#000000';
+  const shadowColor = mode === 'dark' ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.15)';
+  const backgroundImageSrc = `${url.origin}/ogbackground-${mode}.jpg`;
   const avatarImageSrc = `${url.origin}/avatar.jpg`;
   
   return new ImageResponse(
