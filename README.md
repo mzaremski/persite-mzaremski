@@ -45,12 +45,13 @@ Live Example: https://mzaremski.com/
 1. Remix - MDX Rollup plugin integration: [Remix.run: Add MDX plugion](https://remix.run/docs/en/main/guides/vite#add-mdx-plugin)
 2. Persite Landingpage: https://mzaremski.com/persite#pro
 3. **✨Check PRO plan of Persite Boilerplate✨**: https://mzaremski.com/persite#pro
+4. Persite public repository: https://github.com/mzaremski/persite
 
 To run your Remix app locally, make sure your project's local dependencies are installed
 
 ## Author
 
-by Marcin Zaremski
-GitHub: https://github.com/mzaremski/persitehttps://github.com/mzaremsk
-Website: https://mzaremski.com/
-Twitter: https://twitter.com/marcinzaremski
+by Marcin Zaremski  
+GitHub: https://github.com/mzaremski
+Website: https://mzaremski.com/  
+Twitter: https://twitter.com/marcinzaremski  
