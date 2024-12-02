@@ -72,6 +72,7 @@ const persiteData: any = {
     mode: 'dark',
     projectSectionFirst: false,
     shouldShowBlogSection: true,
+    blogInsideMainCard: false,
   },
   seo: {
     author: 'Marcin Zaremski',

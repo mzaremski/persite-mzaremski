@@ -77,6 +77,14 @@ export default function Index() {
                   </>
                 )
               }
+
+              {
+                persiteData.theme.shouldShowBlogSection && persiteData.theme.blogInsideMainCard && (
+                  <Container size="2">
+                    <BlogList/>
+                  </Container>
+                )
+              }
             </div>
 
 
@@ -112,7 +120,7 @@ export default function Index() {
       </Container>
 
       {
-        persiteData.theme.shouldShowBlogSection && (
+        persiteData.theme.shouldShowBlogSection && !persiteData.theme.blogInsideMainCard && (
           <Container size="2">
             <BlogList/>
           </Container>
