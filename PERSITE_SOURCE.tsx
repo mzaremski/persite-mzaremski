@@ -9,13 +9,14 @@ import type { PersiteSource } from "./persite_source_type";
      - public/avatar.jpg picture to your own
      - public/icon.png
   - There is no need to change anything else!
+  - Give some love here: https://x.com/marcinzaremski
 */
 
 const persiteSource: PersiteSource = {
-  name: 'Marcin Zaremski',
-  slogan: 'Freelancer & Indie Hacker',
-  mainPageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
-  mainPageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
+  name: 'John Doe',
+  slogan: 'Software Engineer & Creator',
+  mainPageTitle: "John Doe | Software Engineer & Creator",
+  mainPageDescription: "Full-stack developer, entrepreneur, and tech enthusiast.",
   theme: {
     projectSectionFirst: false,
     shouldShowBlogSection: false,
@@ -30,21 +31,20 @@ const persiteSource: PersiteSource = {
     }
   },
   seo: {
-    author: 'Marcin Zaremski',
-    twitterUsername: 'marcinzaremski',
+    author: 'John Doe',
+    twitterUsername: 'johndoe',
     locale: 'en_US',
   },
   headerSection: {
-    personalDescription: 'A full-stack developer since 2018, with experience working on small projects as well as with large fintech startups (ex-Shares). After a 9-month travel break, I transitioned to indie hacking and freelancing in 2024.',
-    personalSlogan: 'Startup mentality & happy to help you grow!',
+    personalDescription: 'A full-stack developer with experience in both startup and enterprise environments. Passionate about building scalable solutions and creating innovative products.',
+    personalSlogan: 'Building the future, one line of code at a time!',
     typeAnimationSequence: [
       "\ developer",
-      "n indie hacker",
-      "\ freelancer ",
+      "n innovator",
+      "\ creator",
       "n entrepreneur",
-      "\ photograper",
-      "\ surfer",
-      "\ cyclist",
+      "\ builder",
+      "\ coder",
     ]
   },
   accordionSection: {
@@ -53,46 +53,46 @@ const persiteSource: PersiteSource = {
       {title: 'A freelancer', content: FreelancerAccordionContent},
       {title: 'A contractor', content: ContractorAccordionContent},
       {title: 'A full time hire', content: FullTimeHireAccordionContent},
-      {title: 'An indie hacker', content: IndieHackerAccordionContent},
+      {title: 'A co-founder', content: IndieHackerAccordionContent},
     ]
   },
   projectsSection: {
     title: 'Projects',
     items: [
       {
-        title: 'LingoReaders',
+        title: 'ProjectAlpha',
         status: 'in_progress',
         badge: 'Q2 2024',
         badgeColor: 'gray',
-        link: 'https://lingoreaders.com/?utm_source=mzaremski.com',
+        link: 'https://projectalphaplaceholder.com',
       },
       {
-        title: 'Propsify',
+        title: 'BetaApp',
         status: 'in_progress',
         badgeColor: 'gray',
         badge: 'Q1 2024',
-        link: '/propsify',
+        link: '/placeholderbetaapp',
       },
       {
-        title: 'PerSite',
+        title: 'GammaTools',
         status: 'released',
         badgeColor: 'gray',
         badge: 'Q2 2024',
-        link: '/persite',
+        link: '/placeholdergammatools',
       },
       {
-        title: 'GpxOverlay',
+        title: 'DeltaService',
         status: 'released',
         badgeColor: 'green',
-        badge: '1k$/m',
-        link: 'https://gpxoverlay.com/?utm_source=mzaremski.com',
+        badge: '500$/m',
+        link: 'https://deltaserviceplaceholder.com',
       },
       {
-        title: 'Ikonate',
+        title: 'EpsilonLib',
         status: 'released',
         badgeColor: 'indigo',
-        badge: '2018 | Free',
-        link: 'https://ikonate.com/?utm_source=mzaremski.com',
+        badge: '2023 | Free',
+        link: 'https://epsilonlibplaceholder.com',
       },
     ]
   },
@@ -111,9 +111,9 @@ function FreelancerAccordionContent() {
     <div>
       Does your project need:
       <ul>
-        <li>Refactoring?</li>
-        <li>More man-hours this sprint?</li>
-        <li>To ship side features silently?</li>
+        <li>Technical expertise?</li>
+        <li>Additional development support?</li>
+        <li>Feature implementation?</li>
       </ul>
 
       In technologies such as:
@@ -122,26 +122,26 @@ function FreelancerAccordionContent() {
         <li>React/NextJS</li>
         <li>NodeJS</li>
         <li>SQL</li>
-        <li>PostgreSQL</li>
+        <li>Cloud Services</li>
       </ul>
 
-      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br/>
-      Just tell me the name of the project, the kind of work you need, and how often. I will respond ASAP.
+      Contact me: <a href="mailto:john@example.com">john@example.com</a><br/>
+      Please include your project details and requirements. I will respond promptly.
     </div>
   )
 }
+
 function ContractorAccordionContent () {
   return (
     <div>
       <ul>
-        <li>Do you want to validate and build your startup idea?</li>
-        <li>Do you want to build an MVP?</li>
-        <li>Do you need an internal system?</li>
-        <li>Do you have any problem I can solve with software?</li>
+        <li>Need help with your startup idea?</li>
+        <li>Looking to build an MVP?</li>
+        <li>Want to create a custom solution?</li>
+        <li>Have a technical challenge to solve?</li>
       </ul>
-      Mail me: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a><br />
-      Just tell the name of the company/project, briefly describe it, let me know how much time do you think it can take.
-      I will answer ASAP.
+      Contact me: <a href="mailto:john@example.com">john@example.com</a><br />
+      Include your project overview and timeline expectations.
     </div>
   )
 }
@@ -150,8 +150,8 @@ function IndieHackerAccordionContent () {
   return (
     <div>
       <div className="AccordionContentText">
-        Do you want to build a product together? I'm always open to new ideas. Let's brainstorm, plan, and ship it!
-        Mail me here: <a href="mailto:marcinzara@gmail.com">marcinzara@gmail.com</a>
+        Interested in building something together? Let's collaborate on innovative projects!
+        Contact me here: <a href="mailto:john@example.com">john@example.com</a>
       </div>
     </div>
   )
@@ -161,7 +161,7 @@ function FullTimeHireAccordionContent () {
   return (
     <div>
       <div className="AccordionContentText">
-        My CV (2022, outdated a bit) is here: <a href="/Marcin_Zaremski_Fullstack_CV_2022.pdf">Marcin_Zaremski_Fullstack_CV_2022.pdf</a>
+        View my professional experience: <a href="/John_Doe_CV_2024.pdf">John_Doe_CV_2024.pdf</a>
       </div>
     </div>
   )
