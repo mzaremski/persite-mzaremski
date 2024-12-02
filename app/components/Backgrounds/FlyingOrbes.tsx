@@ -1,5 +1,3 @@
-import stylesFlyingOrbes from "./background-flying-orbes.css";
-
 export const FlyingOrbes = () => {
   return (
     <div id="background-flying-orbes">
@@ -23,10 +21,4 @@ export const FlyingOrbes = () => {
       <span></span>
     </div>
   )
-} 
-
-export function links() {
-  return [
-    { rel: "stylesheet", href: stylesFlyingOrbes },
-  ];
 } 

@@ -1,5 +1,3 @@
-import stylesShootingStars from "./background-shooting-stars.css";
-
 export const ShootingStars = () => {
   return (
     <div id="background-shooting-stars">
@@ -16,9 +14,3 @@ export const ShootingStars = () => {
     </div>
   )
 }
-
-export function links() {
-  return [
-    { rel: "stylesheet", href: stylesShootingStars },
-  ];
-} 

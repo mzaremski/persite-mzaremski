@@ -60,6 +60,8 @@ export function links() {
     { rel: "stylesheet", href: FontStyles },
     { rel: "stylesheet", href: styles },
     { rel: "stylesheet", href: stylesAccordion },
+    // @ts-ignore
+    { rel: "stylesheet", href: Backgrounds.css[persiteData.theme.background] },
    // TODO: Make the icon dynamic based on a default radix theme
     { rel: "icon", href: "/icon.png" },
   ];

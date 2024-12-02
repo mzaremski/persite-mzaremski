@@ -1,5 +1,3 @@
-import stylesParallaxyStars from "./background-parallaxy-stars.css";
-
 export const ParallaxyStars = () => {
   return (
     <div id="background-parallaxy-stars">
@@ -16,9 +14,3 @@ export const ParallaxyStars = () => {
     </div>
   )
 }
-
-export function links() {
-  return [
-    { rel: "stylesheet", href: stylesParallaxyStars },
-  ];
-} 
