@@ -70,7 +70,6 @@ const FullTimeHireAccordionContent = () => {
     - .......
 */
 
-
 const persiteSource: PersiteSource = {
   name: 'Marcin Zaremski',
   slogan: 'Freelancer & Indie Hacker',
@@ -78,8 +77,8 @@ const persiteSource: PersiteSource = {
   mainPageDescription: "Not only dev. Also entrepreneur, indie hacker, photographer, surfer and cyclist.",
   theme: {
     projectSectionFirst: false,
-    shouldShowBlogSection: true,
-    blogInsideMainCard: true,
+    shouldShowBlogSection: false,
+    blogInsideMainCard: false,
     background: 'FlyingOrbes',
     radixConfig: {
       appearance: 'dark',

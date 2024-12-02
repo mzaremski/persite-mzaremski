@@ -8,7 +8,7 @@ export interface PersiteSource {
       projectSectionFirst: boolean;
       shouldShowBlogSection: boolean;
       blogInsideMainCard: boolean;
-      background: string;
+      background: 'PerlinNoise' | 'ShootingStars' | 'ParallaxyStars' | 'FlyingOrbes';
       radixConfig: ThemeProps,
     };
     seo: {
