@@ -18,7 +18,7 @@
 
 ## One click deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&integration-ids=icfg_ndUd3CDM3wwcQ28MmoPEg7sq&skippable-integrations=1)  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski)  
 Live Example: https://mzaremski.com/
 
 ## Tech stack
