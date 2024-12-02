@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@vercel/remix";
 import { Link } from "@remix-run/react";
-import persiteData from 'PERSITE_SOURCE';
+import persiteSource from 'PERSITE_SOURCE';
 import { Box, Container, Section, Card} from "@radix-ui/themes";
 import AccordionSection from "~/components/Sections/Accordion";
 import Header from "~/components/Header";
@@ -12,8 +12,8 @@ import ProjectsSection from "~/components/Sections/ProjectsSection";
 import BlogSection from "~/components/Sections/BlogSection";
 
 export const meta: MetaFunction = () => generateMetaTags({
-  title: persiteData.mainPageTitle,
-  description: persiteData.mainPageDescription,
+  title: persiteSource.mainPageTitle,
+  description: persiteSource.mainPageDescription,
 });
 
 export default function Index() {
@@ -24,16 +24,16 @@ export default function Index() {
             <Section size="1">
               <Header/>
               <p style={{ paddingTop: '1em' }}>
-                {persiteData.headerSection.personalDescription}
+                {persiteSource.headerSection.personalDescription}
               </p>
               <p>
-                {persiteData.headerSection.personalSlogan}
+                {persiteSource.headerSection.personalSlogan}
               </p>
             </Section>
 
             <div style={{ marginBottom: '42px' }}>
               {
-                persiteData.theme.projectSectionFirst
+                persiteSource.theme.projectSectionFirst
                 ? (
                   <>
                     <ProjectsSection/>
@@ -49,7 +49,7 @@ export default function Index() {
               }
 
               {
-                persiteData.theme.shouldShowBlogSection && persiteData.theme.blogInsideMainCard && (
+                persiteSource.theme.shouldShowBlogSection && persiteSource.theme.blogInsideMainCard && (
                   <BlogSection/>
                 )
               }
@@ -63,7 +63,7 @@ export default function Index() {
             {/* // TODO: Change to Flex */}
             <Box width="100%" height="60px" style={{
                 display: 'grid',
-                gridTemplateColumns: `repeat(${persiteData.socialSection.length}, 1fr)`,
+                gridTemplateColumns: `repeat(${persiteSource.socialSection.length}, 1fr)`,
                 gap: '0px',
                 position: 'absolute',
                 bottom: '0',
@@ -71,8 +71,8 @@ export default function Index() {
                 borderTop: '1px solid var(--gray-a6)',
               }}>
               {
-                persiteData.socialSection.map((item, index) => (
-                  <Box style={{ textAlign: 'center', borderRight: persiteData.socialSection.length-1 === index ? 'none' : '1px solid var(--gray-a6)' }} key={item.link}>
+                persiteSource.socialSection.map((item, index) => (
+                  <Box style={{ textAlign: 'center', borderRight: persiteSource.socialSection.length-1 === index ? 'none' : '1px solid var(--gray-a6)' }} key={item.link}>
                     <Link
                       to={item.link}
                       style={{ color: 'var(--gray-a11)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', scale: '1.6' }}
@@ -88,7 +88,7 @@ export default function Index() {
       </Container>
 
       {
-        persiteData.theme.shouldShowBlogSection && !persiteData.theme.blogInsideMainCard && (
+        persiteSource.theme.shouldShowBlogSection && !persiteSource.theme.blogInsideMainCard && (
           <Container size="2">
             <BlogSection/>
           </Container>

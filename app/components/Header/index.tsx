@@ -1,5 +1,5 @@
 import { Flex, Avatar } from "@radix-ui/themes";
-import persiteData from 'PERSITE_SOURCE';
+import persiteSource from 'PERSITE_SOURCE';
 import { TypeAnimation } from "react-type-animation"; 
 
 export default function Header({ ogImage }: { ogImage?: boolean }) {
@@ -22,7 +22,7 @@ export default function Header({ ogImage }: { ogImage?: boolean }) {
           A<TypeAnimation
             speed={2}
             repeat={Infinity}
-            sequence={persiteData.headerSection.typeAnimationSequence}
+            sequence={persiteSource.headerSection.typeAnimationSequence}
           />
         </span>
           )

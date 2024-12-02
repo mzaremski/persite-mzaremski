@@ -2,7 +2,7 @@ import React from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import persiteData from "PERSITE_SOURCE";
+import persiteSource from "PERSITE_SOURCE";
 import { Section } from "@radix-ui/themes"
 import type { ComponentProps } from "react";
 
@@ -43,7 +43,7 @@ const AccordionComponent = () => (
     collapsible
     type="single"
   >
-    {persiteData.accordionSection.items.map((item, index) => (
+    {persiteSource.accordionSection.items.map((item, index) => (
       <Accordion.Item
         key={index}
         value={item.title}
@@ -59,7 +59,7 @@ const AccordionComponent = () => (
 const AccordionSection = () => {
   return (
     <Section size="1">
-      <h2>{persiteData.accordionSection.title}</h2>
+      <h2>{persiteSource.accordionSection.title}</h2>
       <AccordionComponent />
     </Section>
   );

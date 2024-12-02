@@ -71,7 +71,7 @@ const FullTimeHireAccordionContent = () => {
 */
 
 
-const persiteData: PersiteSource = {
+const persiteSource: PersiteSource = {
   name: 'Marcin Zaremski',
   slogan: 'Freelancer & Indie Hacker',
   mainPageTitle: "Marcin Zaremski | Freelancer & Indie Hacker",
@@ -164,4 +164,4 @@ const persiteData: PersiteSource = {
   ]
 }
 
-export default persiteData;
+export default persiteSource;

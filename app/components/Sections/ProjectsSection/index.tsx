@@ -1,15 +1,15 @@
 import React from 'react';
 import { Section, Badge, Spinner } from '@radix-ui/themes';
 import { Link } from '@remix-run/react';
-import persiteData from 'PERSITE_SOURCE';
+import persiteSource from 'PERSITE_SOURCE';
 
 const ProjectsSection = () => {
     return (
       <Section size="1">
-        <h2>{persiteData.projectsSection.title}</h2>
+        <h2>{persiteSource.projectsSection.title}</h2>
         <ul className="project_list">
           {
-            persiteData.projectsSection.items.map((item) => (
+            persiteSource.projectsSection.items.map((item) => (
             <li className="project_list_item" key={item.title}>
               <Link to={item.link}>
                 <span>{item.title}</span>

@@ -14,7 +14,7 @@ import stylesAccordion from "~/accordion.css?url";
 import Footer from "./components/Footer";
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import * as Backgrounds from "./components/Backgrounds";
-import persiteData from 'PERSITE_SOURCE';
+import persiteSource from 'PERSITE_SOURCE';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,9 +29,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       </head>
       <body>
-        <Theme {...persiteData.theme.radixConfig}>
+        <Theme {...persiteSource.theme.radixConfig}>
           {/* @ts-ignore */}
-          {Backgrounds[persiteData.theme.background]()}
+          {Backgrounds[persiteSource.theme.background]()}
 
           <main style={{ paddingTop: '2vw', paddingLeft: '2vw', paddingRight: '2vw', paddingBottom: '5vw' }}>
             {children}
@@ -61,7 +61,7 @@ export function links() {
     { rel: "stylesheet", href: styles },
     { rel: "stylesheet", href: stylesAccordion },
     // @ts-ignore
-    { rel: "stylesheet", href: Backgrounds.css[persiteData.theme.background] },
+    { rel: "stylesheet", href: Backgrounds.css[persiteSource.theme.background] },
    // TODO: Make the icon dynamic based on a default radix theme
     { rel: "icon", href: "/icon.png" },
   ];

@@ -1,10 +1,10 @@
 import { ImageResponse } from '@vercel/og';
 import type { LoaderFunctionArgs } from '@remix-run/node';
-import persiteData from 'PERSITE_SOURCE';
+import persiteSource from 'PERSITE_SOURCE';
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
-  const mode = persiteData.theme.radixConfig.appearance;
+  const mode = persiteSource.theme.radixConfig.appearance;
   const fontColor = mode === 'dark' ? '#ffffff' : '#000000';
   const shadowColor = mode === 'dark' ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.15)';
   const backgroundImageSrc = `${url.origin}/ogbackground-${mode}.jpg`;
@@ -34,7 +34,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
               margin: '0'
             }}
           >
-            {persiteData.name}
+            {persiteSource.name}
           </h1>
           <span
             style={{
@@ -42,7 +42,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
               color: fontColor,
             }}
           >
-            {persiteData.slogan}
+            {persiteSource.slogan}
           </span>
         </div>
     </div>
