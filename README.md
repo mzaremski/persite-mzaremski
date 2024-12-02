@@ -1,19 +1,25 @@
 # Persite
-
-One-click, customizable, 10min boilerplate personal website to boost your SEO and visibility on the internet.
-
 <img width="1052" alt="image" src="https://github.com/user-attachments/assets/e4451dc2-4ac9-4af6-a3cb-316ea3dec1a6">
+
+🛠️ Built with modern tech stack:
+- Server-side rendering
+- SEO optimized
+  
+🚀 Easy to deploy:
+- Deploy with one click
+- Fill one file with your content
+
+🎨 Highly customizable:
+- 4 animated backgrounds
+- Dark/Light mode
+- Colors
+- Border radius
+- Scaling
 
 ## One click deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&integration-ids=icfg_ndUd3CDM3wwcQ28MmoPEg7sq&skippable-integrations=1)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mzaremski/persite-mzaremski&integration-ids=icfg_ndUd3CDM3wwcQ28MmoPEg7sq&skippable-integrations=1)  
 Live Example: https://mzaremski.com/
-
-Designed from Indie Hacker for Indie Hackers
-
-## Tech stack
-
-What is this?
 
 ## Tech stack
 
