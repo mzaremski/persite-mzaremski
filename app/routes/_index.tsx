@@ -9,7 +9,7 @@ import Header from "~/components/Header";
 // import WaitlistForm from "~/components/WaitlistForm";
 import { generateMetaTags } from "~/utils/generateMetaTags";
 
-export const meta: MetaFunction = ({ data, params, location }) => generateMetaTags({
+export const meta: MetaFunction = () => generateMetaTags({
   title: persiteData.mainPageTitle,
   description: persiteData.mainPageDescription,
 });

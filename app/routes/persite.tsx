@@ -1,6 +1,14 @@
+import type { MetaFunction } from "@vercel/remix";
 import { Button, Card, Container, Separator, Text, Heading, Strong, Link as RadixLink } from "@radix-ui/themes";
 import { Link } from "@remix-run/react";
 import Header from "~/components/Header";
+import { generateMetaTags } from "~/utils/generateMetaTags";
+
+export const meta: MetaFunction = () => generateMetaTags({
+  title: 'PerSite | one-click free personal website & blog boilerplate',
+  description: 'Create your personal website with a blog, analytics, deployment, custom design in one click and 10 minutes!',
+});
+
 
 export default function PostsLayout() {
   return (
